@@ -9,7 +9,7 @@
 ### Kanban Board
 [Kanban Board]()
 
-> ***We are a group of five***
+> ***We are a group of two***
 1. Member 1 - [Pedro](https://github.com/ppmarq1)
 2. Member 2 - [Artur](https://github.com/Arturgouveia1970)
 
