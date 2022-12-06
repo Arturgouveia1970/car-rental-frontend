@@ -5,6 +5,8 @@ import Cars from '../features/cars/carlist/Carlist';
 import CarDetails from '../features/cars/cardetails/CarDetails';
 import MyReservations from '../features/reservation/myreservations/MyReservations';
 import Reserve from '../features/reservation/reserve/Reserve';
+import DeleteCar from '../features/cars/deletecar/DeleteCar';
+import NewCar from '../features/cars/newcar/Newcar';
 
 const App = () => (
   (
@@ -16,6 +18,8 @@ const App = () => (
           <Route exact path="/cardetails" element={<CarDetails />} />
           <Route exact path="/myreservations" element={<MyReservations />} />
           <Route exact path="/reserve" element={<Reserve />} />
+          <Route exact path="/deletecar" element={<DeleteCar />} />
+          <Route exact path="/newcar" element={<NewCar />} />
 
         </Routes>
       </Router>
