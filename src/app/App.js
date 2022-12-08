@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from '../features/home/Home';
-import Cars from '../features/cars/carlist/Carlist';
+import Cars from '../features/cars/carlist/Carslist';
 import CarDetails from '../features/cars/cardetails/CarDetails';
 import MyReservations from '../features/reservation/myreservations/MyReservations';
 import Reserve from '../features/reservation/reserve/Reserve';
