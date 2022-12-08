@@ -17,7 +17,7 @@
 ## Built With
 
 - Major languages (Javascript)
-- Framworks (React, Redux)
+- Frameworks (React, Redux)
 
 ## Live version
 
@@ -39,7 +39,7 @@ To get a local copy up and running follow these simple example steps.
 - Clone the project
 ```
 git clone https://github.com/Arturgouveia1970/car-rental-frontend.git
-cd motorbike_booking_frontend
+cd car-rental-frontend
 ```
 
 ### Setup
