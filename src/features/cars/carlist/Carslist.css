@@ -2,14 +2,14 @@
   --black-color: #212529;
 }
 
-.motorslist-cont {
+.carslist-cont {
   width: 100%;
   height: 100vh;
   position: relative;
   display: flex;
 }
 
-.motorslist-wrapper {
+.carslist-wrapper {
   width: calc(100% - 220px);
   height: fit-content(100%);
   margin-left: 220px;
@@ -18,7 +18,7 @@
   position: relative;
 }
 
-.motor-cards-list {
+.car-cards-list {
   padding: 0 7.5%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -26,12 +26,12 @@
   row-gap: 2rem;
 }
 
-.motocycles-close {
+.cars-close {
   height: 4rem;
   width: 100%;
 }
 
-.motorslist-header {
+.carslist-header {
   margin: 2rem 7.5% 1rem 7.5%;
   padding: 1rem 0;
   display: flex;
@@ -41,7 +41,7 @@
   background-color: #fff;
 }
 
-.motorslist-header h1 {
+.carslist-header h1 {
   font-size: calc(1vw + 16px);
   font-weight: 800;
   letter-spacing: 1.2px;
@@ -60,13 +60,13 @@
   color: var(--black-color);
 }
 
-.motor-card {
+.car-card {
   width: 100%;
   cursor: pointer;
   border-radius: 5px;
   border: 1px transparent solid;
 }
 
-.motor-card:hover {
+.car-card:hover {
   border: 1px rgba(0, 0, 0, 0.2) solid;
 }

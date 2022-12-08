@@ -3,13 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpWideShort } from '@fortawesome/free-solid-svg-icons';
 import Categories from '../../categories/Categories';
 
-const MotorsListHeader = () => {
+const CarsListHeader = () => {
   const [categoriesView, setCategoriesView] = useState(false);
 
   const ShowCategories = (status) => setCategoriesView(status);
 
   return (
-    <div className="motorslist-header">
+    <div className="carslist-header">
       <h1>ALL MOTORCYLES</h1>
       <i
         className="brands-filter"
@@ -23,4 +23,4 @@ const MotorsListHeader = () => {
   );
 };
 
-export default MotorsListHeader;
+export default CarsListHeader;
