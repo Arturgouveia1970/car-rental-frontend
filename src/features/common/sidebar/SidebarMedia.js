@@ -23,7 +23,7 @@ const SidebarMedia = () => {
           </NavLink>
         ))}
       </div>
-      <p>@2022 MOTORBIKE BOOKING</p>
+      <p>@2022 CAR BOOKING</p>
     </div>
   );
 };
