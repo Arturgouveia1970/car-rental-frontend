@@ -2,7 +2,7 @@ import React from 'react';
 import './Sidebar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
-import logo from '../../assets/images/logo.png';
+import logo from '../../../assets/images/logo.png';
 import SidebarLinks from './SidebarLinks';
 import SidebarMedia from './SidebarMedia';
 

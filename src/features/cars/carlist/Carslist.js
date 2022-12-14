@@ -1,5 +1,5 @@
 import React from 'react';
-import './Carlist.css';
+// import './Carlist.css';
 import { useNavigate } from 'react-router-dom';
 import CarCard from '../../common/carcard/CarCard';
 import Sidebar from '../../common/sidebar/Sidebar';

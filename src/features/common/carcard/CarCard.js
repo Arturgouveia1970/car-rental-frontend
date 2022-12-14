@@ -1,6 +1,6 @@
 import React from 'react';
 import './CarCard.css';
-import car1 from '../../assets/images/car1.png';
+import car1 from '../../../assets/images/Girls-With-Car-7.jpg';
 import CarCardMedia from './CarCardMedia';
 
 const CarCard = () => (
