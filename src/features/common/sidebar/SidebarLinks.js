@@ -5,11 +5,11 @@ const SidebarLinks = () => {
   const location = useLocation();
 
   const links = [
-    { id: 1, path: '/motorcycles', text: 'MOTORCYCLES' },
+    { id: 1, path: '/carlist', text: 'CARS' },
     { id: 2, path: '/reserve', text: 'RESERVE' },
-    { id: 3, path: '/my_reservations', text: 'MY RESERVATIONS' },
-    { id: 4, path: '/add_motorcycle', text: 'ADD MOTOCYCLE' },
-    { id: 5, path: '/delete_motorcycle', text: 'DELETE MOTORCYCLE' },
+    { id: 3, path: '/myreservations', text: 'MY RESERVATIONS' },
+    { id: 4, path: '/newcar', text: 'ADD CAR' },
+    { id: 5, path: '/deletecar', text: 'DELETE CAR' },
   ];
   return (
     <div className="sidebar-routes-links">
