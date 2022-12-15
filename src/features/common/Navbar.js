@@ -43,6 +43,8 @@ const Navbar = () => (
         <a href="/" className="text-decoration-none" style={{ color: 'inherit' }}>
           <img className="logo" src="https://logoeps.com/wp-content/uploads/2013/06/vespa-motorcycle-vector-logo.png" alt="Vespa logo" />
         </a>
+
+
       </CDBSidebarHeader>
 
       <CDBSidebarContent className="sidebar-content">
