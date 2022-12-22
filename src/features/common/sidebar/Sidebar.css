@@ -14,7 +14,6 @@
   top: 0;
   left: 0;
   box-shadow: 2px 0 1px #f1f1f1;
-  /* margin-left: 15px;} */
 }  
 
 .x-sidebar {
@@ -54,6 +53,7 @@
   font-weight: 800;
   color: var(--light-black);
   /* color: #fff; */
+  
 }
 
 #link_active {
