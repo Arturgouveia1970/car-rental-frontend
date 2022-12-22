@@ -7,7 +7,7 @@ import CarsListHeader from './CarsListHeader';
 
 const Cars = () => {
   const navigate = useNavigate();
-  const HandleDetails = (id) => navigate(`/Cars/${id}/details`);
+  const HandleDetails = () => navigate('/cardetails');
 
   return (
     <div className="carslist-cont">

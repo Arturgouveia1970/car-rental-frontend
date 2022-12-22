@@ -1,11 +1,22 @@
 import React from 'react';
 import './CarDetails.css';
+import Sidebar from '../../common/sidebar/Sidebar';
+// import CarsListHeader from '../carlist/CarsListHeader';
+import car1 from '../../../assets/images/Honda-Car.jpg';
 
 const CarDetails = () => (
-  <>
-    <h1>Cars details</h1>
-    <h3>This page will show each car specifications</h3>
-  </>
+  <div className="carslist-cont">
+    <Sidebar />
+    <div className="car-details">
+      <img src={car1} alt="car" />
+      <div className="text">
+        <h4>Honda CX</h4>
+        <h4>2010</h4>
+        <h4>$250.00 p/d</h4>
+        <button type="button" className="book-btn">Reserve now</button>
+      </div>
+    </div>
+  </div>
 );
 
 export default CarDetails;
