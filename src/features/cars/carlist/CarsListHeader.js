@@ -10,7 +10,7 @@ const CarsListHeader = () => {
 
   return (
     <div className="carslist-header">
-      <h1>ALL MOTORCYLES</h1>
+      <h1>ALL CARS</h1>
       <i
         className="brands-filter"
         onClick={() => { ShowCategories(true); }}
