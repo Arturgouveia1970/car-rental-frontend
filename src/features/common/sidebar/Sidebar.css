@@ -46,14 +46,13 @@
 
 .sidebar-routes-links a {
   text-decoration: none;
-  width: calc(100% - 24px);
-  padding: 15px 0 15px 35px;
-  margin: 0 12px;
+  width:65.5%;
+  padding: 15px 0 15px 24px;
+  margin: 0 50px;
   font-size: 14px;
   font-weight: 800;
-  color: var(--light-black);
-
-  /* color: #fff; */
+  color: ;
+  background-color: whitesmoke;
 }
 
 #link_active {
