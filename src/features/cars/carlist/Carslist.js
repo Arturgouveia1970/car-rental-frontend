@@ -52,6 +52,13 @@ const Cars = () => {
         price: 1200.00,
         image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.Nxrx266lwb12Snk19ZTazAHaEK%26pid%3DApi&f=1&ipt=9eb90592a525f00f96d10ab9ec0ed0c76c7d111abcedf5a0e31ce604254742ab&ipo=images',
       },
+      {
+        id: 7,
+        model: 'Porche 911',
+        year: 2014,
+        price: 2200.00,
+        image: 'https://www.pixelstalk.net/wp-content/uploads/2016/09/HD-Porsche-911-Wallpaper.jpeg',
+      },
     ],
   );
 
