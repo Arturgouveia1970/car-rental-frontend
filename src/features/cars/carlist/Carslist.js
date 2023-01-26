@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 // import './Carlist.css';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 // import CarCard from '../../common/carcard/CarCard';
 import Sidebar from '../../common/sidebar/Sidebar';
 import CarsListHeader from './CarsListHeader';
 
 const Cars = () => {
-  // const navigate = useNavigate();
-  // const HandleDetails = () => navigate('/cardetails');
+  const navigate = useNavigate();
+  const HandleDetails = () => navigate('/CarDetails');
   const [cars] = useState(
     [
       {
@@ -70,6 +72,7 @@ const Cars = () => {
     fontWheight: 'bolder',
     border: '1px solid',
     width: '120px',
+    textDecoration: 'none',
   };
 
   return (
@@ -78,30 +81,42 @@ const Cars = () => {
       <div className="carslist-wrapper">
         <CarsListHeader />
         <div className="car-cards-list">
-          <ul>
-            {cars.map((car) => (
-              <>
-                <li key={car.id}>
-                  <img src={car.image} alt={car.model} style={{ width: '100%' }} />
-                  <div
-                    className="car-info"
-                    style={
-                      carStyle
-                    }
+          <ul className="carlist">
+            <Carousel>
+              {cars.map((car) => (
+                <>
+                  <li
+                    key={car.id}
+                    onClick={() => { HandleDetails(car); }}
+                    aria-hidden="true"
                   >
-                    <p>{car.model}</p>
-                    <p>{car.year}</p>
-                    <p>
-                      $
-                      {' '}
-                      {car.price}
-                      {' '}
-                      per day
-                    </p>
-                  </div>
-                </li>
-              </>
-            ))}
+                    <img
+                      src={car.image}
+                      alt={car.model}
+                      style={{
+                        width: '750px',
+                      }}
+                    />
+                    <div
+                      className="car-info"
+                      style={
+                        carStyle
+                      }
+                    >
+                      <p>{car.model}</p>
+                      <p>{car.year}</p>
+                      <p>
+                        $
+                        {' '}
+                        {car.price}
+                        {' '}
+                        per day
+                      </p>
+                    </div>
+                  </li>
+                </>
+              ))}
+            </Carousel>
           </ul>
         </div>
       </div>
