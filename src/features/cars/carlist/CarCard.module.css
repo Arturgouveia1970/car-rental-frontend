@@ -27,7 +27,7 @@
   max-height: 351px;
   object-fit: cover;
   min-width: 250px;
-  max-width: 250px;
+  max-width: 650px;
   border-radius: 20px;
 }
 
@@ -40,6 +40,6 @@
   border-radius: 20px;
   padding: 0.4rem 0.75rem;
   margin-top: 1rem;
-  color: white;
+  color: rgb(212, 83, 83);
   font-weight: 500;
 }

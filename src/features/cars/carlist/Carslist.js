@@ -1,127 +1,64 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 // import './Carlist.css';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 // import CarCard from '../../common/carcard/CarCard';
+// import { v4 as uuidv4 } from 'uuid';
 import Sidebar from '../../common/sidebar/Sidebar';
 import CarsListHeader from './CarsListHeader';
+import CarCard from './CarCard';
+import './Carousel.css';
 
-const Cars = () => {
-  const navigate = useNavigate();
-  const HandleDetails = () => navigate('/CarDetails');
-  const [cars] = useState(
-    [
-      {
-        id: 1,
-        model: 'Lamborghini',
-        year: 2019,
-        price: 2750.00,
-        image: 'https://wallup.net/wp-content/uploads/2019/09/848518-2010-lamborghini-sesto-elemento-concept-supercar-748x561.jpg',
-      },
-      {
-        id: 2,
-        model: 'Mercedes',
-        year: 2020,
-        price: 1750.00,
-        image: 'https://carsguide-res.cloudinary.com/image/upload/f_auto%2Cfl_lossy%2Cq_auto%2Ct_default/v1/editorial/2017-Vision-Mercedes-Benz-Maybach-Concept-Pebble-Beach-Blue-Cabriolet-1200x800p-1.jpg',
-      },
-      {
-        id: 3,
-        model: 'Ferrari',
-        year: 2021,
-        price: 2150.00,
-        image: 'https://cdn.carshowroom.com.au/media/21504120/news-ferrari-2022-gallery-01-0918.jpg',
-      },
-      {
-        id: 4,
-        model: 'McLaren',
-        year: 2015,
-        price: 2850.00,
-        image: 'https://www.hdcarwallpapers.com/walls/2015_mclaren_650s_coupe_3-wide.jpg',
-      },
-      {
-        id: 5,
-        model: 'Nissan GT-R',
-        year: 2016,
-        price: 1600.00,
-        image: 'https://www.gannett-cdn.com/-mm-/ade337e50c415e3e12cea926f24d60083ea40a92/c=284-400-2759-1798/local/-/media/USATODAY/test/2013/11/19/1384911451000-gt-r5.jpg?width=2475&height=1398&fit=crop&format=pjpg&auto=webp',
-      },
-      {
-        id: 6,
-        model: 'Ford GT',
-        year: 1966,
-        price: 1200.00,
-        image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.Nxrx266lwb12Snk19ZTazAHaEK%26pid%3DApi&f=1&ipt=9eb90592a525f00f96d10ab9ec0ed0c76c7d111abcedf5a0e31ce604254742ab&ipo=images',
-      },
-      {
-        id: 7,
-        model: 'Porche 911',
-        year: 2014,
-        price: 2200.00,
-        image: 'https://www.pixelstalk.net/wp-content/uploads/2016/09/HD-Porsche-911-Wallpaper.jpeg',
-      },
-    ],
-  );
-
-  const carStyle = {
-    color: 'red',
-    marginLeft: '600px',
-    padding: '5px',
-    fontSize: '18px',
-    fontWheight: 'bolder',
-    border: '1px solid',
-    width: '120px',
-    textDecoration: 'none',
-  };
-
+const Carlist = () => {
+  const [cars, setCars] = useState([]);
+  const [loading, setloading] = useState(false);
+  useEffect(() => {
+    setloading(true);
+    axios
+      .get('https://carrental2.onrender.com/api/v1/cars')
+      .then((response) => {
+        setCars(response.data.cars);
+        setloading(false);
+      });
+  }, []);
+  if (loading) {
+    return (
+      <div className="container-fluid vh-100 v-100 d-flex justify-content-center align-items-center">
+        <i className="fa-solid fa-spinner fa-spin fs-1" />
+      </div>
+    );
+  }
   return (
     <div className="carslist-cont">
       <Sidebar />
       <div className="carslist-wrapper">
         <CarsListHeader />
         <div className="car-cards-list">
-          <ul className="carlist">
-            <Carousel>
-              {cars.map((car) => (
-                <>
-                  <li
-                    key={car.id}
-                    onClick={() => { HandleDetails(car); }}
-                    aria-hidden="true"
-                  >
-                    <img
-                      src={car.image}
-                      alt={car.model}
-                      style={{
-                        width: '750px',
-                      }}
-                    />
-                    <div
-                      className="car-info"
-                      style={
-                        carStyle
-                      }
-                    >
-                      <p>{car.model}</p>
-                      <p>{car.year}</p>
-                      <p>
-                        $
-                        {' '}
-                        {car.price}
-                        {' '}
-                        per day
-                      </p>
-                    </div>
-                  </li>
-                </>
-              ))}
-            </Carousel>
-          </ul>
+          {/* <ul className="carlist"> */}
+          <Carousel>
+            {/* {
+              cars.map((image, index) => (
+                <img key={index} src={image.id} alt={cars.model} />
+              ))
+            } */}
+            {cars.map((car) => (
+              <CarCard
+                key={car.id}
+                id={car.id}
+                model={car.model}
+                image={car.image}
+                year={car.year}
+                price={car.price}
+              />
+            ))}
+          </Carousel>
+          {/* </ul> */}
         </div>
       </div>
     </div>
   );
 };
 
-export default Cars;
+export default Carlist;

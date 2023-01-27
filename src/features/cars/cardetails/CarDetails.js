@@ -12,7 +12,7 @@ const CarDetails = () => (
       <div className="text">
         <h4>HONDA CX 2010</h4>
         <h4>$250.00 p/d</h4>
-        <button type="button" className="book-btn">Reserve now</button>
+        <button type="button" className="book-btn">Reserve Now</button>
       </div>
     </div>
   </div>
