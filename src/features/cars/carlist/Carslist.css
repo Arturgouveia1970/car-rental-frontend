@@ -12,7 +12,7 @@
 .carslist-wrapper {
   width: calc(100% - 220px);
   height: fit-content(100%);
-  margin-left: 220px;
+  margin-left: 200px;
   display: flex;
   flex-direction: column;
   position: relative;

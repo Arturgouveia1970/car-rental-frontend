@@ -14,6 +14,7 @@
   align-items: center;
   flex-direction: column;
   min-height: 400px;
+  margin-left: 0;
 }
 
 .imgCnt {
@@ -27,7 +28,7 @@
   max-height: 351px;
   object-fit: cover;
   min-width: 250px;
-  max-width: 650px;
+  max-width: 250px;
   border-radius: 20px;
 }
 

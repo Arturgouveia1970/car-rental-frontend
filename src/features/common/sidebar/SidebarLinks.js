@@ -5,7 +5,7 @@ const SidebarLinks = () => {
   const location = useLocation();
 
   const links = [
-    { id: 1, path: '/carlist', text: 'CARS' },
+    { id: 1, path: '/carlist', text: 'HOME' },
     { id: 2, path: '/reserve', text: 'RESERVE' },
     { id: 3, path: '/myreservations', text: 'MY RESERVATIONS' },
     { id: 4, path: '/newcar', text: 'ADD CAR' },

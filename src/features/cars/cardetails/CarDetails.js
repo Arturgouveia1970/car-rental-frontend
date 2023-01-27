@@ -1,12 +1,12 @@
 import React from 'react';
 import './CarDetails.css';
-import Sidebar from '../../common/sidebar/Sidebar';
+// import Sidebar from '../../common/sidebar/Sidebar';
 // import CarsListHeader from '../carlist/CarsListHeader';
 import car1 from '../../../assets/images/Honda-Car.jpg';
 
 const CarDetails = () => (
   <div className="carslist-cont">
-    <Sidebar />
+    {/* <Sidebar /> */}
     <div className="car-details">
       <img src={car1} alt="car" />
       <div className="text">
