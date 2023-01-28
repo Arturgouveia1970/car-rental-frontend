@@ -66,9 +66,11 @@ Visit http://localhost:3000/ in your browser.
 👤 **Pedro** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 
 
-- GitHub: [Pedro](https://github.com/ppmarq1)
-- Twitter: [@ppmarq1](https://twitter.com/ppmarq1)
-- LinkedIn: [@Pedro](https://br.linkedin.com/in/pedroalmeidamarques/)
+<img src="https://user-images.githubusercontent.com/67911212/185442918-aa30589c-c9f9-4edb-8955-1036ceebd5c2.png" width="18"/> [Pedro](https://github.com/ppmarq1)
+
+<img src="https://user-images.githubusercontent.com/67911212/185442918-aa30589c-c9f9-4edb-8955-1036ceebd5c2.png" width="18"/> [@ppmarq1](https://twitter.com/ppmarq1)
+
+<img src="https://user-images.githubusercontent.com/67911212/185442306-ef777855-06ac-4e36-b649-6f0dda869366.png" width="18"/> [@Pedro](https://br.linkedin.com/in/pedroalmeidamarques/)
 
 👤 **Artur** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 
