@@ -8,24 +8,27 @@ import Sidebar from '../../common/sidebar/Sidebar';
 const CarDetails = () => {
   const { id } = useParams();
   const [car, setCar] = useState({});
-  // const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  useEffect((id) => {
-    // setLoading(true);
+  useEffect(() => {
+    setLoading(true);
     axios
       .get(`https://carrental2.onrender.com/api/v1/cars/${id}`)
-      .then((response) => setCar(response.data.car));
-  //   setLoading(false);
-  }, [id]);
+      .then((response) => {
+        setCar(response.data.cars);
+        setLoading(false);
+      })
+      .catch((error) => console.log(`Error: ${error}`));
+  }, []);
 
-  // if (loading) {
-  //   return (
-  /* eslint-disable-next-line max-len */
-  //     <div className="container-fluid vh-100 v-100 d-flex justify-content-center align-items-center">
-  //       <i className="fa-solid fa-spinner fa-spin fs-1" />
-  //     </div>
-  //   );
-  // }
+  if (loading) {
+    return (
+    /* eslint-disable-next-line max-len */
+      <div className="container-fluid vh-100 v-100 d-flex justify-content-center align-items-center">
+        <i className="fa-solid fa-spinner fa-spin fs-1" />
+      </div>
+    );
+  }
   const newLocal = <Sidebar />;
   return (
     <>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 // import Home from '../features/home/Home';
 import Carlist from '../features/cars/carlist/Carslist';
 import CarDetails from '../features/cars/cardetails/CarDetails';
@@ -12,18 +12,18 @@ import Home from '../features/home/Home';
 const App = () => (
   (
     <>
-      <Router>
-        <Routes>
-          <Route exact path="/" element={<Carlist />} />
-          <Route exact path="/home" element={<Home />} />
-          <Route exact path="/cars/:id" element={<CarDetails />} />
-          <Route exact path="/myreservations" element={<MyReservations />} />
-          <Route exact path="/reserve" element={<Reserve />} />
-          <Route exact path="/deletecar" element={<DeleteCar />} />
-          <Route exact path="/newcar" element={<NewCar />} />
+      {/* <Router> */}
+      <Routes>
+        <Route exact path="/" element={<Carlist />} />
+        <Route exact path="/home" element={<Home />} />
+        <Route exact path="/car/:id" element={<CarDetails />} />
+        <Route exact path="/myreservations" element={<MyReservations />} />
+        <Route exact path="/reserve/:id" element={<Reserve />} />
+        <Route exact path="/deletecar" element={<DeleteCar />} />
+        <Route exact path="/newcar" element={<NewCar />} />
 
-        </Routes>
-      </Router>
+      </Routes>
+      {/* </Router> */}
     </>
   ));
 

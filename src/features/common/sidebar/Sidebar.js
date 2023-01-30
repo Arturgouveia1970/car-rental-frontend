@@ -1,23 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-// import './Sidebar.css';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import styles from './Sidebar.module.css';
-// import logo from '../../../assets/images/logo.png';
-// import SidebarLinks from './SidebarLinks';
-// import SidebarMedia from './SidebarMedia';
-
-// const Sidebar = () => (
-//   <div className="sidebar-cont">
-//     <div>
-//       <i className="x-sidebar"><FontAwesomeIcon icon={faXmark} /></i>
-//       {/* <img src={logo} alt="logo" className="logo-sidebar" />  */}
-//     </div>
-//     <SidebarLinks />
-//     <SidebarMedia />
-//   </div>
-// );
+import logo from '../../../assets/images/logo-black.png';
 
 const Sidebar = () => (
   <>
@@ -29,10 +13,10 @@ const Sidebar = () => (
           <div className="d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start">
             <NavLink
               to="/home"
-              className="d-flex align-items-center pb-sm-3 mb-3 me-md-auto text-decoration-none"
+              className="d-flex align-items-center pb-sm-5 mb-5 me-md-auto text-decoration-none"
             >
-              <span className={`${styles.brandName} fs-1 ps-4`}>
-                DreamCars
+              <span className={`${styles.brandName} fs-1 ps-1`}>
+                <img src={logo} alt="logo" />
               </span>
             </NavLink>
             <ul
@@ -40,7 +24,7 @@ const Sidebar = () => (
               id="menu"
             >
               <li className="w-100">
-                <NavLink to="/home" className="nav-link mb-2 fs-5">
+                <NavLink to="/home" className="nav-link mb-2 fs-5 mt-5">
                   <i className="fa-solid fa-house me-2" />
                   <span className="ms-1 d-none d-sm-inline">Home</span>
                 </NavLink>
@@ -55,7 +39,7 @@ const Sidebar = () => (
                 </NavLink>
               </li>
               <li className="w-100">
-                <NavLink to="/reservations" className="nav-link mb-2 fs-5">
+                <NavLink to="/myreservations" className="nav-link mb-2 fs-5">
                   <i className="fa-solid fa-calendar-days me-2" />
                   <span className="ms-1 d-none d-sm-inline">
                     My Reservations
@@ -63,13 +47,13 @@ const Sidebar = () => (
                 </NavLink>
               </li>
               <li className="w-100">
-                <NavLink to="/add-car" className="nav-link mb-2 fs-5">
+                <NavLink to="/newcar" className="nav-link mb-2 fs-5">
                   <i className="fa-solid fa-plus me-2" />
                   <span className="ms-1 d-none d-sm-inline">Add Car</span>
                 </NavLink>
               </li>
               <li className="w-100">
-                <NavLink to="/delete-car" className="nav-link mb-2 fs-5">
+                <NavLink to="/deletecar" className="nav-link mb-2 fs-5">
                   <i className="fa-solid fa-trash-can me-2" />
                   <span className="ms-1 d-none d-sm-inline">Delete Car</span>
                 </NavLink>

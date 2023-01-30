@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import Sidebar from '../../common/sidebar/Sidebar';
+import Sidebar from '../../common/sidebar/Sidebar';
 // import CarsListHeader from '../carlist/CarsListHeader';
 import car1 from '../../../assets/images/Honda-Car.jpg';
 import './Newcar.css';
@@ -18,7 +18,7 @@ const NewCar = () => {
 
   return (
     <div className="">
-      {/* <Sidebar /> */}
+      <Sidebar />
       <div className="new-car-form">
         <img src={car1} alt="car" />
         <form className="add-car-form">
