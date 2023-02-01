@@ -32,10 +32,6 @@
   border-radius: 20px;
 }
 
-.driverImg {
-  width: 10%;
-}
-
 .price {
   background-color: var(--primary-green);
   border-radius: 20px;
@@ -43,4 +39,15 @@
   margin-top: 1rem;
   color: rgb(212, 83, 83);
   font-weight: 500;
+}
+
+@media screen and (max-width: 550px) {
+  .carImg {
+    min-height: 350px;
+    max-height: 351px;
+    object-fit: cover;
+    min-width: 150px;
+    max-width: 200px;
+    border-radius: 20px;
+  }
 }
