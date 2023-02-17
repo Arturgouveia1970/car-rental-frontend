@@ -16,7 +16,7 @@ const CarDetails = () => {
       .get(`https://carrental2.onrender.com/api/v1/cars/${id}`)
       .then((response) => {
         setCar(response.data.car);
-        console.log(car);
+        console.log(id);
         setLoading(false);
       });
   }, [id]);

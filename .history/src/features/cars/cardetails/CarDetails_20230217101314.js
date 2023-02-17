@@ -8,35 +8,23 @@ import Sidebar from '../../common/sidebar/Sidebar';
 const CarDetails = () => {
   const { id } = useParams();
   const [car, setCar] = useState({});
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
+    // setLoading(true);
     axios
       .get(`https://carrental2.onrender.com/api/v1/cars/${id}`)
-      .then((response) => {
-        setCar(response.data.car);
-        console.log(car);
-        setLoading(false);
-      });
+      .then((response) => setCar(response.data.car));
   }, [id]);
-  console.log(id);
 
   const newLocal = <Sidebar />;
-  if (loading) {
-    return (
-      <div className="container-fluid vh-100 v-100 d-flex justify-content-center align-items-center">
-        <i className="fa-solid fa-spinner fa-spin fs-1" />
-      </div>
-    );
-  }
   return (
     <>
       {newLocal}
       <h2 className={styles.title}>CAR DETAILS</h2>
       <div className={styles.detailContainer}>
         <div className={styles.car}>
-          <img src={car.image} alt={car.model} />
+          <img src={car.} alt={car.model} />
         </div>
         <div className={styles.detail}>
           <h2>{car.model}</h2>

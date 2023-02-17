@@ -15,21 +15,11 @@ const CarDetails = () => {
     axios
       .get(`https://carrental2.onrender.com/api/v1/cars/${id}`)
       .then((response) => {
-        setCar(response.data.car);
-        console.log(car);
-        setLoading(false);
-      });
+        setCar(response.data.car));
   }, [id]);
-  console.log(id);
+  console.log('hello');
 
   const newLocal = <Sidebar />;
-  if (loading) {
-    return (
-      <div className="container-fluid vh-100 v-100 d-flex justify-content-center align-items-center">
-        <i className="fa-solid fa-spinner fa-spin fs-1" />
-      </div>
-    );
-  }
   return (
     <>
       {newLocal}

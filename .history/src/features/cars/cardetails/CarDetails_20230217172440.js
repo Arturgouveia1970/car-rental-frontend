@@ -16,11 +16,10 @@ const CarDetails = () => {
       .get(`https://carrental2.onrender.com/api/v1/cars/${id}`)
       .then((response) => {
         setCar(response.data.car);
-        console.log(car);
         setLoading(false);
       });
   }, [id]);
-  console.log(id);
+  console.log();
 
   const newLocal = <Sidebar />;
   if (loading) {
@@ -35,9 +34,9 @@ const CarDetails = () => {
       {newLocal}
       <h2 className={styles.title}>CAR DETAILS</h2>
       <div className={styles.detailContainer}>
-        <div className={styles.car}>
+        {/* <div className={styles.car}>
           <img src={car.image} alt={car.model} />
-        </div>
+        </div> */}
         <div className={styles.detail}>
           <h2>{car.model}</h2>
           <div className={styles.carYear}>

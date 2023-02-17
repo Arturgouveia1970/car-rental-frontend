@@ -6,7 +6,7 @@ import styles from './CarCard.module.css';
 const Car = ({
   id, model, year, price, image,
 }) => (
-  <NavLink key={id} to={`/car/${id}`} className={styles.links}>
+  <NavLink to={`/car/${id}`} className={styles.links} >
     <div className={styles.carCnt} key={id}>
       <div className={styles.imgCnt}>
         <img src={image} alt={model} className={styles.carImg} />

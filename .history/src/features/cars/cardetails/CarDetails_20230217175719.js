@@ -12,15 +12,14 @@ const CarDetails = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios
+    axios.request
       .get(`https://carrental2.onrender.com/api/v1/cars/${id}`)
       .then((response) => {
         setCar(response.data.car);
-        console.log(car);
         setLoading(false);
       });
   }, [id]);
-  console.log(id);
+  console.log(car.image);
 
   const newLocal = <Sidebar />;
   if (loading) {
@@ -36,7 +35,7 @@ const CarDetails = () => {
       <h2 className={styles.title}>CAR DETAILS</h2>
       <div className={styles.detailContainer}>
         <div className={styles.car}>
-          <img src={car.image} alt={car.model} />
+          <img src={image} alt={car.model} />
         </div>
         <div className={styles.detail}>
           <h2>{car.model}</h2>
