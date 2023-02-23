@@ -12,7 +12,6 @@ import Home from '../features/home/Home';
 const App = () => (
   (
     <>
-      {/* <Router> */}
       <Routes>
         <Route exact path="/" element={<Carlist />} />
         <Route exact path="/home" element={<Home />} />
@@ -23,7 +22,6 @@ const App = () => (
         <Route exact path="/newcar" element={<NewCar />} />
 
       </Routes>
-      {/* </Router> */}
     </>
   ));
 

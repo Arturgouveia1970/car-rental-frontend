@@ -5,7 +5,10 @@ import Carousel from 'nuka-carousel/lib/carousel';
 import { useTheme } from '@mui/material/styles';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import useMediaQuery from '@mui/material/useMediaQuery';
+// import CarCard from '../../common/carcard/CarCard';
+// import { v4 as uuidv4 } from 'uuid';
 import Sidebar from '../../common/sidebar/Sidebar';
+// import CarsListHeader from './CarsListHeader';
 import CarCard from './CarCard';
 import './Carousel.css';
 

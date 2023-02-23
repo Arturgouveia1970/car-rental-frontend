@@ -48,7 +48,6 @@ const CarDetails = () => {
   //       setLoading(false);
   //     });
   // }, [id]);
-
   return (
     <>
       {newLocal}

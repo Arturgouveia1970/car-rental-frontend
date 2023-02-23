@@ -1,5 +1,5 @@
 // eslint-plugin-react-hooks
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink, useParams } from 'react-router-dom';
 import axios from 'axios';
 import styles from './CarDetails.module.css';
@@ -11,7 +11,7 @@ const CarDetails = () => {
   const [loading, setLoading] = useState(false);
 
   // fetch data callback function vvv asyncronous
-  const fetchData = useCallback(async (id) => {
+  const fetchData = useCallback( async (id) => {
     setLoading(true);
     // await axios get function
     await axios
@@ -21,13 +21,15 @@ const CarDetails = () => {
         console.log(response.data);
         setLoading(false);
       });
-  }, []);
-  useEffect(() => {
-    // call the callback function
-    fetchData(id);
+  }, [])
 
-    // include the function in the dependencies
-  }, [id, fetchData]);
+useEffect(() => {
+  
+  // call the callback function
+  fetchData(id);
+
+        // include the function in the dependencies
+}, [id, fetchData]);
 
   const newLocal = <Sidebar />;
   if (loading) {
@@ -37,18 +39,6 @@ const CarDetails = () => {
       </div>
     );
   }
-
-  // useEffect(() => {
-  //   setLoading(true);
-  //   axios
-  //     .get(`https://carrental2.onrender.com/api/v1/cars/${id}`)
-  //     .then((response) => {
-  //       setCar(response.data);
-  //       console.log(response.data);
-  //       setLoading(false);
-  //     });
-  // }, [id]);
-
   return (
     <>
       {newLocal}

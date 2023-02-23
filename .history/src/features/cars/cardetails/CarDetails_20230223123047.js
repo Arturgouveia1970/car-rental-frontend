@@ -22,6 +22,7 @@ const CarDetails = () => {
         setLoading(false);
       });
   }, []);
+  
   useEffect(() => {
     // call the callback function
     fetchData(id);

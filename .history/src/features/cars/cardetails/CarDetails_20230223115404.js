@@ -22,11 +22,13 @@ const CarDetails = () => {
         setLoading(false);
       });
   }, []);
+
   useEffect(() => {
+    
     // call the callback function
     fetchData(id);
 
-    // include the function in the dependencies
+          // include the function in the dependencies
   }, [id, fetchData]);
 
   const newLocal = <Sidebar />;
@@ -37,18 +39,6 @@ const CarDetails = () => {
       </div>
     );
   }
-
-  // useEffect(() => {
-  //   setLoading(true);
-  //   axios
-  //     .get(`https://carrental2.onrender.com/api/v1/cars/${id}`)
-  //     .then((response) => {
-  //       setCar(response.data);
-  //       console.log(response.data);
-  //       setLoading(false);
-  //     });
-  // }, [id]);
-
   return (
     <>
       {newLocal}

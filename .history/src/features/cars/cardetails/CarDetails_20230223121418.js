@@ -38,17 +38,16 @@ const CarDetails = () => {
     );
   }
 
-  // useEffect(() => {
-  //   setLoading(true);
-  //   axios
-  //     .get(`https://carrental2.onrender.com/api/v1/cars/${id}`)
-  //     .then((response) => {
-  //       setCar(response.data);
-  //       console.log(response.data);
-  //       setLoading(false);
-  //     });
-  // }, [id]);
-
+  useEffect(() => {
+    setLoading(true);
+    axios
+      .get(`https://carrental2.onrender.com/api/v1/cars/${id}`)
+      .then((response) => {
+        setCar(response.data);
+        console.log(response.data);
+        setLoading(false);
+      });
+  }, [id]);
   return (
     <>
       {newLocal}
