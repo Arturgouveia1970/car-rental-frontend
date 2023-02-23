@@ -12,7 +12,7 @@
 .carslist-wrapper {
   width: calc(100% - 220px);
   height: fit-content(100%);
-  margin-left: 220px;
+  margin-left: 200px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -24,6 +24,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 7.5%;
   row-gap: 2rem;
+  list-style-type: none;
 }
 
 .cars-close {
@@ -69,4 +70,8 @@
 
 .car-card:hover {
   border: 1px rgba(0, 0, 0, 0.2) solid;
+}
+
+.carlist {
+  list-style-type: none;
 }
