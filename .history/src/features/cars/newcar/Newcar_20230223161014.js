@@ -1,36 +1,36 @@
 /* eslint-disable camelcase */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
-// import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import axios from 'axios';
-import styles from './newCar.module.css';
+import styles from './AddCar.module.css';
 
 const Newcar = () => {
   const [model, setModel] = useState('');
   const [price, setPrice] = useState('');
   const [image, setImage] = useState('');
-  const [year, setYear] = useState('');
   const [responseMsg, setResponseMsg] = useState('');
   const [loading, setLoading] = useState(false);
-  // const user = useSelector((state) => state.user);
+  const user = useSelector((state) => state.user);
 
   const submitCar = (e) => {
     e.preventDefault();
     setLoading(true);
     const car = {
+      user_id: user.user.id,
       model,
-      year,
-      image,
+      driver_name,
+      picture,
       price,
     };
 
     axios
-      .post('https://carrental2.onrender.com/api/v1/cars', car)
+      .post('https://luxy-rides.onrender.com/api/v1/car', car)
       .then((response) => {
         setLoading(false);
         setModel('');
-        setYear('');
-        setImage('');
+        setDriverName('');
+        setPicture('');
         setPrice('');
         setResponseMsg(response.data.success);
       })
@@ -75,16 +75,16 @@ const Newcar = () => {
           </div>
           <div>
             <label htmlFor="driverName" className="form-label text-white ms-3">
-              year:
+              Driver&apos;s name:
             </label>
             <input
-              id="year"
+              id="driverName"
               className={`${styles.input} form-control form-control-lg px-4 mx-2`}
               type="text"
               placeholder="Driver's Name"
               aria-label=".form-control-lg example"
-              value={year}
-              onChange={(e) => setYear(e.target.value)}
+              value={driver_name}
+              onChange={(e) => setDriverName(e.target.value)}
               required
             />
           </div>
@@ -114,10 +114,10 @@ const Newcar = () => {
               id="picture"
               className={`${styles.input} form-control form-control-lg px-4 mx-2`}
               type="text"
-              placeholder="Image Link"
+              placeholder="Picture Link"
               aria-label=".form-control-lg example"
-              value={image}
-              onChange={(e) => setImage(e.target.value)}
+              value={picture}
+              onChange={(e) => setPicture(e.target.value)}
               required
             />
           </div>

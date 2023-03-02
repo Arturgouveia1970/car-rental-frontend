@@ -54,6 +54,7 @@ const Newcar = () => {
         Fill the details of your car.
       </p>
       <form
+eslint-disable next-line
         className={`${styles.zindex} ${styles.form} d-flex justify-content-center mb-2 align-items-end`}
         onSubmit={submitCar}
       >

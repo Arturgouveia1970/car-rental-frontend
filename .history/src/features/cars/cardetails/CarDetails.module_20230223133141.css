@@ -44,7 +44,7 @@
 }
 
 .detail h2 {
-  margin-left: 20px;
+  margin-left: 35px;
   margin-bottom: 30px;
   font-weight: bold;
 }
@@ -67,7 +67,6 @@
   bottom: 30px;
   right: 30px;
   padding: 10px;
-
 }
 
 .btncontainer button {
@@ -167,6 +166,12 @@
     bottom: 0;
     right: 10px;
     padding: 10px;
+  }
+
+  .carDriver {
+    display: flex;
+    gap: 0 10px;
+    background-color: #ecf0f1;
   }
 
   .btncontainer button {

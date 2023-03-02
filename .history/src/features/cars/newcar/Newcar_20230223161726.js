@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 // import { useSelector } from 'react-redux';
 import axios from 'axios';
-import styles from './newCar.module.css';
+import styles from './AddCar.module.css';
 
 const Newcar = () => {
   const [model, setModel] = useState('');
@@ -83,8 +83,8 @@ const Newcar = () => {
               type="text"
               placeholder="Driver's Name"
               aria-label=".form-control-lg example"
-              value={year}
-              onChange={(e) => setYear(e.target.value)}
+              value={}
+              onChange={(e) => setDriverName(e.target.value)}
               required
             />
           </div>
@@ -114,10 +114,10 @@ const Newcar = () => {
               id="picture"
               className={`${styles.input} form-control form-control-lg px-4 mx-2`}
               type="text"
-              placeholder="Image Link"
+              placeholder="Picture Link"
               aria-label=".form-control-lg example"
-              value={image}
-              onChange={(e) => setImage(e.target.value)}
+              value={picture}
+              onChange={(e) => setPicture(e.target.value)}
               required
             />
           </div>

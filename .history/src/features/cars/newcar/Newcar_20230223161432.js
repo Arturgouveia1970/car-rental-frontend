@@ -3,13 +3,13 @@
 import React, { useState } from 'react';
 // import { useSelector } from 'react-redux';
 import axios from 'axios';
-import styles from './newCar.module.css';
+import styles from './AddCar.module.css';
 
 const Newcar = () => {
   const [model, setModel] = useState('');
   const [price, setPrice] = useState('');
   const [image, setImage] = useState('');
-  const [year, setYear] = useState('');
+  const [year, setYear] = useStte('');
   const [responseMsg, setResponseMsg] = useState('');
   const [loading, setLoading] = useState(false);
   // const user = useSelector((state) => state.user);
@@ -75,16 +75,16 @@ const Newcar = () => {
           </div>
           <div>
             <label htmlFor="driverName" className="form-label text-white ms-3">
-              year:
+              Driver&apos;s name:
             </label>
             <input
-              id="year"
+              id="driverName"
               className={`${styles.input} form-control form-control-lg px-4 mx-2`}
               type="text"
               placeholder="Driver's Name"
               aria-label=".form-control-lg example"
-              value={year}
-              onChange={(e) => setYear(e.target.value)}
+              value={driver_name}
+              onChange={(e) => setDriverName(e.target.value)}
               required
             />
           </div>
@@ -114,10 +114,10 @@ const Newcar = () => {
               id="picture"
               className={`${styles.input} form-control form-control-lg px-4 mx-2`}
               type="text"
-              placeholder="Image Link"
+              placeholder="Picture Link"
               aria-label=".form-control-lg example"
-              value={image}
-              onChange={(e) => setImage(e.target.value)}
+              value={picture}
+              onChange={(e) => setPicture(e.target.value)}
               required
             />
           </div>
