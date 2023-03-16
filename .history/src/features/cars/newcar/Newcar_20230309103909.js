@@ -25,7 +25,7 @@ const Newcar = () => {
     };
 
     axios
-      .post('https://dreamcars.onrender.com/api/v1/cars', car)
+      .post('https://carrental2.onrender.com/api/v1/cars', car)
       .then((response) => {
         setLoading(false);
         setModel('');
@@ -81,7 +81,7 @@ const Newcar = () => {
               id="year"
               className={`${styles.input} form-control form-control-lg px-4 mx-2`}
               type="text"
-              placeholder="Year"
+              placeholder=""
               aria-label=".form-control-lg example"
               value={year}
               onChange={(e) => setYear(e.target.value)}

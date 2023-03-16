@@ -10,7 +10,7 @@ const DeleteCar = () => {
   useEffect((id) => {
     setLoading(true);
     axios
-      .get(`https://dreamcars.onrender.com/api/v1/cars/${id}past`)
+      .get(`https://drea.onrender.com/api/v1/cars/${id}past`)
       .then((response) => {
         setCars(response.data.cars);
         setLoading(false);

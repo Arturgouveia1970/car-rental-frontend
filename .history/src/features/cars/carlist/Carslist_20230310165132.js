@@ -15,7 +15,12 @@ const Carlist = () => {
   useEffect(() => {
     setloading(true);
     axios
-      .get('https://dreamcars.onrender.com/api/v1/cars')
+      .get('https://car-data.p.rapidapi.com/cars');
+      params: {limit: '10'};
+      headers: {
+        'X-Api-Key': 'aoarturgouveiacompany',
+        'X-RapidAPI-Host': 'car-data.p.rapidapi.com'
+      }
       .then((response) => {
         setCars(response.data.cars);
         console.log(response.data);

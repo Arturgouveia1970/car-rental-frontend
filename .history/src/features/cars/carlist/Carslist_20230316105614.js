@@ -18,7 +18,6 @@ const Carlist = () => {
       .get('https://dreamcars.onrender.com/api/v1/cars')
       .then((response) => {
         setCars(response.data.cars);
-        console.log(response.data);
         setloading(false);
       });
   }, []);
