@@ -40,13 +40,11 @@ const Newcar = () => {
         setResponseMsg(err.response.data.error);
       });
   };
-  const newLocal = <Sidebar />;
 
   return (
-    <div
+    <><Sidebar /><div
       className={`${styles.cnt} container-fluid vh-100 d-flex flex-column align-items-center`}
     >
-      {newLocal}
       <h2 className={`${styles.zindex} fs-1 text-white`}>Add Car</h2>
       <p className={`${styles.zindex} fs-5 text-white text-center`}>
         You&apos;ve got a fancy car from which you want to make some extra
@@ -73,8 +71,7 @@ const Newcar = () => {
               aria-label=".form-control-lg example"
               value={model}
               onChange={(e) => setModel(e.target.value)}
-              required
-            />
+              required />
           </div>
           <div>
             <label htmlFor="driverName" className="form-label text-white ms-3">
@@ -88,8 +85,7 @@ const Newcar = () => {
               aria-label=".form-control-lg example"
               value={year}
               onChange={(e) => setYear(e.target.value)}
-              required
-            />
+              required />
           </div>
         </div>
         <div className="d-flex mb-3">
@@ -106,8 +102,7 @@ const Newcar = () => {
               value={price}
               onChange={(e) => setPrice(e.target.value)}
               min="0"
-              required
-            />
+              required />
           </div>
           <div>
             <label htmlFor="picture" className="form-label text-white ms-3">
@@ -121,8 +116,7 @@ const Newcar = () => {
               aria-label=".form-control-lg example"
               value={image}
               onChange={(e) => setImage(e.target.value)}
-              required
-            />
+              required />
           </div>
         </div>
         {loading ? (
@@ -139,7 +133,7 @@ const Newcar = () => {
         )}
       </form>
       <p className={`${styles.zindex} fs-5 fw-semibold`}>{responseMsg}</p>
-    </div>
+    </div></>
   );
 };
 

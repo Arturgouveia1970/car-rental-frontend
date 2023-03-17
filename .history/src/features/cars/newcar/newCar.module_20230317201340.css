@@ -1,6 +1,7 @@
 .cnt {
+  display: flex;
   height: 100vh;
-  position: relative;
+  /* position: relative; */
   padding-top: 50px;
 }
 

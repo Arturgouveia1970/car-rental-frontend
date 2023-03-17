@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 // import { useSelector } from 'react-redux';
 import axios from 'axios';
 import styles from './newCar.module.css';
-import Sidebar from '../../common/sidebar/Sidebar';
+import Sid
 
 const Newcar = () => {
   const [model, setModel] = useState('');
@@ -40,13 +40,12 @@ const Newcar = () => {
         setResponseMsg(err.response.data.error);
       });
   };
-  const newLocal = <Sidebar />;
 
   return (
+    <Sidebar />
     <div
       className={`${styles.cnt} container-fluid vh-100 d-flex flex-column align-items-center`}
     >
-      {newLocal}
       <h2 className={`${styles.zindex} fs-1 text-white`}>Add Car</h2>
       <p className={`${styles.zindex} fs-5 text-white text-center`}>
         You&apos;ve got a fancy car from which you want to make some extra

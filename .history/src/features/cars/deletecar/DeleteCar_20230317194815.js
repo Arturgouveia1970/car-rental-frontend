@@ -46,7 +46,7 @@ const DeleteCar = () => {
           <CarCard
             key={car.id}
             id={car.id}
-            image={car.image}
+            image={car.}
             model={car.model}
             year={car.year}
             cars={cars}

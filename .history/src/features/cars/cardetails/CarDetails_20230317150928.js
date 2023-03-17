@@ -64,7 +64,7 @@ const CarDetails = () => {
             <p>{car.year}</p>
           </div>
           <div className={styles.price}>
-            <p>Price P/D: </p>
+            <p>Price PD: </p>
             <p className={styles.priceColor}>
               $
               {car.price}

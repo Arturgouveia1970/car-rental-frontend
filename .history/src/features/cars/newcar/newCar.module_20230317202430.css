@@ -70,7 +70,7 @@
 }
 
 .zindex {
-  z-index: 3;
+  z-index: 8;
 }
 
 @media screen and (max-width: 1250px) {
