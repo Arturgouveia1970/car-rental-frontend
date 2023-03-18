@@ -1,0 +1,97 @@
+.cnt {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  padding-top: 50px;
+}
+
+.cnt::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("http://1.bp.blogspot.com/-3QRsjl0wan4/Uk0X7hIP0eI/AAAAAAAAAHY/oE8w8r3oRvs/s1600/Super+sport+cars+wallpapers+2.jpg");
+  /* http://www.zastavki.com/pictures/1920x1200/2009/Auto_Other_auto_wallpapers_Fast_car_018827_.jpg */
+  /* http://1.bp.blogspot.com/-3QRsjl0wan4/Uk0X7hIP0eI/AAAAAAAAAHY/oE8w8r3oRvs/s1600/Super+sport+cars+wallpapers+2.jpg */
+  /* https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F3.bp.blogspot.com%2F-asJMjRTSlX8%2FUhoYrl51rcI%2FAAAAAAAAOfc%2FLH4FNTYI7tE%2Fs1600%2Fmost_expensive_cars_24.jpg&f=1&nofb=1&ipt=a5170a107fb1abb5cfa8bd0ecdbf75b88a10ff0c7875810c060be998fa6bddb5&ipo=images */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.cnt::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-green);
+  opacity: 0.8;
+}
+
+.hr {
+  width: 50%;
+  border: 1px solid #fff;
+  z-index: 3;
+}
+
+.input {
+  width: 200px;
+  border-radius: 25px;
+  background-color: var(--primary-green);
+  color: #eeebeb;
+  border-color: #fff;
+}
+
+.input::placeholder {
+  color: #dfcfcf;
+  opacity: 0.7;
+  font-weight: 100;
+}
+
+.btn {
+  height: 42.25px;
+  color: var(--primary-green);
+  background-color: #fff;
+  border-color: var(--primary-green);
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 25px;
+  margin-bottom: 14px;
+}
+
+.btn:hover {
+  background-color: var(--primary-green) !important;
+  border-color: #fff !important;
+  color: #fff !important;
+}
+
+.zindex {
+  z-index: 3;
+}
+
+@media screen and (max-width: 1250px) {
+  .form {
+    flex-direction: column;
+  }
+
+  .btn {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .input {
+    width: 150px;
+    font-size: 15px;
+  }
+
+  .btn {
+    font-size: 15px;
+  }
+}
