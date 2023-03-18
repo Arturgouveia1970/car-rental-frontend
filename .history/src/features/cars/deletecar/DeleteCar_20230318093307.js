@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 // import { useSelector } from 'react-redux';
-import DeleleCarUi from 'DelCarCard';
+import DeleleCarUi from 'DelCarCa'
 
 function DeleteCar() {
   const [cars, setCars] = useState([]);
@@ -43,15 +43,14 @@ function DeleteCar() {
       </p>
       <div className="container-fluid d-flex flex-wrap justify-content-center">
         {cars.map((car) => (
-          <DeleleCarUi
+          <CarCard
             key={car.id}
             id={car.id}
             image={car.image}
             model={car.model}
             year={car.year}
             cars={cars}
-            setCars={setCars}
-          />
+            setCars={setCars} />
         ))}
       </div>
     </>

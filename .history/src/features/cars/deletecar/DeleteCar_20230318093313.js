@@ -43,15 +43,14 @@ function DeleteCar() {
       </p>
       <div className="container-fluid d-flex flex-wrap justify-content-center">
         {cars.map((car) => (
-          <DeleleCarUi
+          <CarCard
             key={car.id}
             id={car.id}
             image={car.image}
             model={car.model}
             year={car.year}
             cars={cars}
-            setCars={setCars}
-          />
+            setCars={setCars} />
         ))}
       </div>
     </>

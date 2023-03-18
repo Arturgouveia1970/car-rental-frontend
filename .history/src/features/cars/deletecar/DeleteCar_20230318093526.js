@@ -50,7 +50,7 @@ function DeleteCar() {
             model={car.model}
             year={car.year}
             cars={cars}
-            setCars={setCars}
+            setCars={setCars} 
           />
         ))}
       </div>
