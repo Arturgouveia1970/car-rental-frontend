@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 // import { useSelector } from 'react-redux';
-import DelCar
+import DeleteCarUI
 
-function DeleteCar() {
+const DeleteCar = () => {
   const [cars, setCars] = useState([]);
   const [loading, setLoading] = useState(false);
   // const user = useSelector((state) => state.user);
@@ -50,10 +50,11 @@ function DeleteCar() {
             model={car.model}
             year={car.year}
             cars={cars}
-            setCars={setCars} />
+            setCars={setCars}
+          />
         ))}
       </div>
     </>
   );
-}
+};
 export default DeleteCar;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 // import { useSelector } from 'react-redux';
-import DelCar
+import 
 
 function DeleteCar() {
   const [cars, setCars] = useState([]);
