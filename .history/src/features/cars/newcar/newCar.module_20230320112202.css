@@ -28,6 +28,11 @@
 
 .cnt::after {
   content: "";
+  /* position: absolute; */
+  /* top: 0;
+  left: 0;
+  width: 75%;
+  height: 100%; */
   background-color: var(--primary-green);
   opacity: 0.8;
 }
