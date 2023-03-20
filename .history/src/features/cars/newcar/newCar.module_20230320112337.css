@@ -16,10 +16,6 @@
   margin-bottom: 40%;
 }
 
-.zindex {
-  z-index: 4;
-}
-
 .textctn .zindex {
   margin-left: 25%;
 }
@@ -71,6 +67,10 @@
   background-color: var(--primary-green) !important;
   border-color: #fff !important;
   color: #fff !important;
+}
+
+.zindex {
+  z-index: 4;
 }
 
 .form {
