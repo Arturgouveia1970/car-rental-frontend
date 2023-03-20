@@ -107,7 +107,7 @@
 
   .textctn {
     display: flex;
-    justify-content: space-around;
+    justify-content: s;
     align-items: center;
     padding-left: 20px;
     margin-left: -50%;

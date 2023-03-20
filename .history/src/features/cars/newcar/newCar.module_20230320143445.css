@@ -13,7 +13,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 80%;
+  margin-bottom: 40%;
   margin-left: -20%;
 }
 
@@ -107,10 +107,10 @@
 
   .textctn {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     padding-left: 20px;
-    margin-left: -50%;
+    margin-right: 0%;
     width: 100vh;
   }
 }
