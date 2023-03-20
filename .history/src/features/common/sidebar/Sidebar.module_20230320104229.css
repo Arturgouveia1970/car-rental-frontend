@@ -1,0 +1,52 @@
+.sidebarCnt {
+  width: 260px;
+  padding: 0;
+}
+
+.navbarContainer {
+  background-color: #0e0d0d;
+  border-right: 1px solid #f0f5f2;
+}
+
+.brandName {
+  font-family: var(--pacifico);
+  color: #000;
+  width: 10px;
+  height: 20px;
+  margin-top: 0px;
+  margin-left: 9px;
+}
+
+.mobileMenu {
+  background-color: #fefefe;
+}
+
+.mobileNav {
+  background-color: #fefefe;
+  border-bottom: 1px solid #f0f5f2;
+}
+
+.mobileNavLink {
+  width: 150px;
+  text-decoration: none;
+  color: var(--gray-text);
+  text-align: center;
+  border-radius: 5px;
+}
+
+.menuBtn {
+  color: #000;
+  font-size: 25px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+#menu {
+  margin-top: 100px;
+}
+
+.img {
+  max-width: 00px;
+  max-height: 200px;
+}

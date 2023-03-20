@@ -1,0 +1,12 @@
+.application {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar {
+  width: 30%;
+}
+
+.rest {
+  width: 70%;
+}

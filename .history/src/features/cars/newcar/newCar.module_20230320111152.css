@@ -1,0 +1,129 @@
+.cnt {
+  display: flex;
+  height: 100vh;
+  margin-top: 0%;
+  /* position: relative; */
+  padding-top: 0px;
+  /* margin-left: 25%; */
+  background-image: url("http://1.bp.blogspot.com/-3QRsjl0wan4/Uk0X7hIP0eI/AAAAAAAAAHY/oE8w8r3oRvs/s1600/Super+sport+cars+wallpapers+2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 10%;
+}
+
+.textctn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40%;
+}
+
+.textctn .zindex {
+  margin-left: 25%;
+}
+
+.cnt::before {
+  content: "";
+  /* position: absolute; */
+  /* top: 0;
+  left: 0;
+  bottom: 0;
+  width: 75%; */
+  height: 100%;
+  /* background-image: url("http://1.bp.blogspot.com/-3QRsjl0wan4/Uk0X7hIP0eI/AAAAAAAAAHY/oE8w8r3oRvs/s1600/Super+sport+cars+wallpapers+2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%; */
+}
+
+.cnt::after {
+  content: "";
+  /* position: absolute; */
+  /* top: 0;
+  left: 0;
+  width: 75%;
+  height: 100%; */
+  background-color: var(--primary-green);
+  opacity: 0.8;
+}
+
+.hr {
+  width: 50%;
+  border: 1px solid #fff;
+  z-index: 3;
+  margin-left: 25%;
+}
+
+.input {
+  width: 200px;
+  border-radius: 25px;
+  background-color: var(--primary-green);
+  color: #eeebeb;
+  border-color: #fff;
+}
+
+.input::placeholder {
+  color: #dfcfcf;
+  opacity: 0.7;
+  font-weight: 100;
+}
+
+.btn {
+  height: 42.25px;
+  color: var(--primary-green);
+  background-color: #fff;
+  border-color: var(--primary-green);
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 25px;
+  margin-bottom: 14px;
+}
+
+.btn:hover {
+  background-color: var(--primary-green) !important;
+  border-color: #fff !important;
+  color: #fff !important;
+}
+
+.zindex {
+  z-index: 4;
+}
+
+.form {
+  display: flex;
+  margin-top: 2%;
+}
+
+@media screen and (max-width: 1250px) {
+  .form {
+    flex-direction: column;
+  }
+
+  .btn {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  * {
+    
+  }
+  .input {
+    width: 150px;
+    font-size: 15px;
+  }
+
+  .btn {
+    font-size: 15px;
+  }
+
+  .textctn {
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+    margin-right: 0%;
+    width: 100vh;
+  }
+}
