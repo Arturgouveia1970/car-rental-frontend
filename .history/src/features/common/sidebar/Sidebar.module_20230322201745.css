@@ -1,11 +1,11 @@
 .sidebarCnt {
-  width: 260px;
+  width: 30%;
   padding: 0;
-  background-color: rgb(0, 0, 0);
+  background-color: #555d50;
 }
 
 .navbarContainer {
-  background-color: black;
+  background-color: #0e0d0d;
 }
 
 .brandName {

@@ -10,7 +10,7 @@ const SidebarMedia = () => {
     { id: 1, path: '/twitter', icon: faTwitter },
     { id: 2, path: '/gmail', icon: faGooglePlusG },
     { id: 3, path: '/github', icon: faGithub },
-    { id: 4, path: '/linkedin', icon: faLinkedinIn },
+    { id: 4, path: '/linkein', icon: faLinkedinIn },
     { id: 5, path: '/discord', icon: faDiscord },
   ];
 
