@@ -83,7 +83,7 @@
   color: rgb(81, 192, 115);
   border: 1px solid;
   margin-top: 10px;
-  margin-left: 35%;
+  margin-left: 50%;
   width: 200px;
   padding: 20px;
   border-radius: 20px;
@@ -223,3 +223,7 @@
     font-weight: bold;
   }
 } */
+
+@media screen and {
+  
+}

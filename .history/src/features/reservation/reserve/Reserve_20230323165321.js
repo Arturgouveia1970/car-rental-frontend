@@ -68,13 +68,13 @@ const Reserve = () => {
     <div
       className={`${styles.cnt} container-fluid vh-100 d-flex flex-column align-items-center pt-5`}
     >
-      <h2 className={`${styles.zindex} fs-1 text-white`}>Reserve a Car</h2>
+      <h2 className={`${styles.zindex} fs-1 text-white`}>Reserve a </h2>
       <p className={`${styles.zindex} fs-5 text-white`}>
         Pull up in a fancy car for your next big event!
       </p>
       <hr className={styles.hr} />
       <p className={`${styles.zindex} mb-5 fs-5 text-white`}>
-        Choose a city and reservation dates!
+        Choose a city and a reservation date!
       </p>
       <form
         className={`${styles.zindex} ${styles.form} d-flex justify-content-around mb-5 align-items-end`}

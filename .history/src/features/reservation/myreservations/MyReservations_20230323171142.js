@@ -34,7 +34,7 @@ const MyReservations = () => {
       </h2>
     );
   }
-
+  
   return (
     <div className="container-fluid d-flex flex-column align-items-center">
       <h2 className="my-4">My Reservations</h2>

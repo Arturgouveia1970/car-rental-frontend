@@ -49,7 +49,7 @@ const Carlist = () => {
       <h2 className="h2 text-center mt-5 text-uppercase">
         <strong>Our Latest Cars</strong>
       </h2>
-      <p className="fs-5 text-center text-muted">
+      <p className="fs-5 text-center text-muted mf-">
         Please select a car from below to reserve
       </p>
       <div>

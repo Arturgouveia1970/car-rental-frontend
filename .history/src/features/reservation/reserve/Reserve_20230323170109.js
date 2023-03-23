@@ -74,7 +74,7 @@ const Reserve = () => {
       </p>
       <hr className={styles.hr} />
       <p className={`${styles.zindex} mb-5 fs-5 text-white`}>
-        Choose a city and reservation dates!
+        Choose a city and a reservation dates!
       </p>
       <form
         className={`${styles.zindex} ${styles.form} d-flex justify-content-around mb-5 align-items-end`}
@@ -95,9 +95,9 @@ const Reserve = () => {
           />
         </div>
         <div>
-          <label htmlFor="date" className="form-label text-white ms-3">
+          {/* <label htmlFor="date" className="form-label text-white ms-3">
             start date:
-          </label>
+          </label> */}
           <input
             id="date"
             className={`${styles.input} form-control form-control-lg px-4 mx-2`}
