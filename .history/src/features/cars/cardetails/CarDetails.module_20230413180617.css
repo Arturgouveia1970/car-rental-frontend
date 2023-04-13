@@ -2,51 +2,69 @@
 
 .detailContainer {
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  margin: 50px;
+  flex-direction: column;
+
+  /* margin-left: 120px; */
+
+  /* width: 100vh;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center; */
 }
 
-.title {
+/* .title {
   text-align: center;
   margin-top: 35px;
-}
+  color: blueviolet;
+} */
 
+/*
 .carYear {
   display: flex;
-  gap: 0 10px;
   background-color: #ecf0f1;
   padding: 10px 20px 0 20px;
-}
+  width: 200px;
+  margin-left: 40%;
+} */
 
 .price {
   display: flex;
   gap: 0 10px;
-  padding: 5px 0 0 18px;
+  padding: 5px 0 0 28px;
+  width: 200px;
 }
 
 .priceColor {
-  color: var(--primary-green);
+  font-weight: 800;
+
+  /* background-color: #ecf0f1; */
 }
 
+/*
+
 .car {
-  margin-left: 160px;
-  margin-top: 80px;
+  width: 100%;
+  height: 100%;
+
 }
 
 .car img {
   min-height: 450px;
-  max-height: 451px;
+  max-height: 100%;
   object-fit: cover;
-  min-width: 450px;
-  max-width: 450px;
+  min-width: 610px;
+  max-width: 100%;
   border-radius: 20px;
 }
 
 .detail h2 {
-  margin-left: 75px;
+  margin-left: 20px;
   margin-bottom: 30px;
   font-weight: bold;
+  width: 600px;
+  margin-left: 40%;
+  margin-top: 20px;
 }
 
 .detail p {
@@ -54,20 +72,46 @@
 }
 
 .reservebtn {
-  justify-items: end;
+  justify-items: center;
 }
-
+*/
 .detail {
-  position: relative;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(81, 192, 115);
+  border: 1px solid;
+  margin-top: 10px;
+  margin-left: 35%;
+  width: 200px;
+  padding: 20px;
+  border-radius: 20px;
+  position: absolute;
+  left: -1900px;
+  height: 300px;
+  background-color: #d6dbc3;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s normal;
+  animation-delay: 2s;
 }
 
+@-webkit-keyframes slide {
+  100% { left: 0; }
+}
+
+@keyframes slide {
+  100% { left: 0; }
+}
+
+/*
 .btncontainer {
   position: absolute;
   bottom: 30px;
-  right: 10px;
+  right: 30px;
   padding: 10px;
-}
+} */
 
 .btncontainer button {
   width: 10rem;
@@ -85,6 +129,7 @@
   background-color: #caf149;
 }
 
+/*
 @media screen and (max-width: 768px) {
   .detailContainer {
     flex-direction: column;
@@ -168,12 +213,6 @@
     padding: 10px;
   }
 
-  .carDriver {
-    display: flex;
-    gap: 0 10px;
-    background-color: #ecf0f1;
-  }
-
   .btncontainer button {
     margin: 30px 0;
   }
@@ -183,4 +222,4 @@
     margin-bottom: 30px;
     font-weight: bold;
   }
-}
+} */

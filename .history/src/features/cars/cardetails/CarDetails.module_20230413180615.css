@@ -93,7 +93,7 @@
   background-color: #d6dbc3;
   -webkit-animation: slide 0.5s forwards;
   -webkit-animation-delay: 2s;
-  animation: slide 0.5s normal;
+  animation: slide 0.5s nor;
   animation-delay: 2s;
 }
 
