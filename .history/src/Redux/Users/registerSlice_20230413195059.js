@@ -32,8 +32,9 @@ export const register = createAsyncThunk(
     return result;
   },
 );
-// const dispatch = useDispatch();
+
 export const login = createAsyncThunk(
+  
   'user/login',
   ({
     setLoading,
@@ -43,6 +44,7 @@ export const login = createAsyncThunk(
       .then((response) => {
         localStorage.setItem('user', JSON.stringify(response.data));
         window.location.reload();
+        
       })
       .catch((error) => {
         setLoading(false);

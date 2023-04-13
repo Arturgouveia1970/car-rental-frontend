@@ -32,12 +32,13 @@ export const register = createAsyncThunk(
     return result;
   },
 );
-// const dispatch = useDispatch();
+
 export const login = createAsyncThunk(
   'user/login',
   ({
     setLoading,
   }) => {
+    const dispatch = use
     const result = axios
       .get('https://dreamcars.onrender.com/api/v1/users/login')
       .then((response) => {
@@ -52,6 +53,7 @@ export const login = createAsyncThunk(
           error: error.response.data.error,
         };
       });
+    (dispatch(.result);
     return result;
   },
 );

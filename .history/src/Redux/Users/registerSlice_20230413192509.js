@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-// import { useDispatch } from 'react-redux';
 import axios from 'axios';
 
 const initialState = {
@@ -32,7 +31,7 @@ export const register = createAsyncThunk(
     return result;
   },
 );
-// const dispatch = useDispatch();
+
 export const login = createAsyncThunk(
   'user/login',
   ({
@@ -72,51 +71,29 @@ export const registerSlice = createSlice({
       };
     },
   },
-  extraReducers: {
-    [register.fulfilled]: (state, action) => ({
-      ...state,
-      user: action.payload.user,
-      logged_in: action.payload.logged_in,
-      error: action.payload.error,
+  extraReducers: (builder) => {
+    builder.addCase(register.fulfilled, (state, action) => {
+      state.user = action.payload,
+      state.logged_in = true,
+      state.error = action.payload.error,
     }),
-    [register.rejected]: (state, action) => ({
-      ...state,
-      error: action.payload,
+    builder.addCase(register.rejected, (state, action) => {
+      state.user = null,
+      state.logged_in = false,
+      state.error = action.payload
     }),
-    [login.fulfilled]: (state, action) => ({
-      ...state,
-      user: action.payload.user,
-      logged_in: action.payload.logged_in,
-      error: action.payload.error,
+    builder.addCase(login.fulfilled, (state, action) => {
+      state.user = action.payload.user,
+      state.logged_in = action.payload.logged_in,
+      state.error = action.payload.error
     }),
-    [login.rejected]: (state, action) => ({
-      ...state,
-      error: action.payload,
-    }),
+    builder.addCase(login.rejected, (state, action) => {
+      state.user = null,
+      state.logged_in = false,
+      state.error = action.payload.error
+    })
   },
-  // extraReducers: (builder) => {
-  //   builder.addCase(register.fulfilled, (state, action) => {
-  //     state.user = action.payload,
-  //     state.logged_in = true,
-  //     state.error = action.payload.error
-  //   }),
-  //   builder.addCase(register.rejected, (state, action) => {
-  //     state.user = null,
-  //     state.logged_in = false,
-  //     state.error = action.payload
-  //   }),
-  //   builder.addCase(login.fulfilled, (state, action) => {
-  //     state.user = action.payload.user,
-  //     state.logged_in = action.payload.logged_in,
-  //     state.error = action.payload.error
-  //   }),
-  //   builder.addCase(login.rejected, (state, action) => {
-  //     state.user = null,
-  //     state.logged_in = false,
-  //     state.error = action.payload.error
-  //   })
-  // },
-});
+})
 
 export default registerSlice.reducer;
 export const { checkUser } = registerSlice.actions;

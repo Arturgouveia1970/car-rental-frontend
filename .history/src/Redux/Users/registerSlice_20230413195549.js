@@ -32,7 +32,7 @@ export const register = createAsyncThunk(
     return result;
   },
 );
-// const dispatch = useDispatch();
+
 export const login = createAsyncThunk(
   'user/login',
   ({
@@ -52,6 +52,7 @@ export const login = createAsyncThunk(
           error: error.response.data.error,
         };
       });
+    (dispatch.resu)
     return result;
   },
 );

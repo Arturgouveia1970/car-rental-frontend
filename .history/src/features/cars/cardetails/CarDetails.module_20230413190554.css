@@ -88,7 +88,7 @@
   padding: 20px;
   border-radius: 20px;
   position: absolute;
-  left: 00px;
+  left: -1900px;
   height: 300px;
   background-color: #d6dbc3;
   /* -webkit-animation: slide 0.5s forwards;
@@ -97,13 +97,13 @@
   animation-delay: 2s; */
 }
 
-/* @-webkit-keyframes slide {
+@-webkit-keyframes slide {
   100% { left: 0; }
 }
 
 @keyframes slide {
   100% { left: 0; }
-} */
+}
 
 /*
 .btncontainer {

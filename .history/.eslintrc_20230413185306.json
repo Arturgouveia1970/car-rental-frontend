@@ -12,7 +12,7 @@
       "ecmaVersion": 2020,
       "sourceType": "module"
     },
-    "extends": ["airbnb", "plugin:react/recommended", "plugin:react-hooks/recommended"],
+    "extends": ["airbnb", "plugin:react/recommended", "plugin:react-hooks/recommended", "plugin:prettier/"],
     "plugins": ["react"],
     "rules": {
       "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],

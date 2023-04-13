@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import axios from 'axios';
 
 const initialState = {
@@ -32,7 +32,7 @@ export const register = createAsyncThunk(
     return result;
   },
 );
-// const dispatch = useDispatch();
+const dispatch = useDispatch();
 export const login = createAsyncThunk(
   'user/login',
   ({
@@ -51,7 +51,7 @@ export const login = createAsyncThunk(
           logged_in: false,
           error: error.response.data.error,
         };
-      });
+      }),
     return result;
   },
 );
