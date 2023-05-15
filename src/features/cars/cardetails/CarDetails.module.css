@@ -88,13 +88,15 @@
   padding: 20px;
   border-radius: 20px;
   position: absolute;
-  left: 00px;
+  left: 0;
   height: 300px;
   background-color: #d6dbc3;
+
   /* -webkit-animation: slide 0.5s forwards;
   -webkit-animation-delay: 2s;
   animation: slide 0.5s normal;
   animation-delay: 2s; */
+  
 }
 
 /* @-webkit-keyframes slide {
