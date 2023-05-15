@@ -3,9 +3,9 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const initialState = {
-  user: null,
+  user: [],
   logged_in: false,
-  error: null,
+  error: [],
 };
 
 export const register = createAsyncThunk(
@@ -24,7 +24,7 @@ export const register = createAsyncThunk(
       .catch((error) => {
         setLoading(false);
         return {
-          user: null,
+          user: [],
           logged_in: false,
           error: error.response.data.error,
         };
@@ -45,7 +45,7 @@ export const login = createAsyncThunk(
       .catch((error) => {
         setLoading(false);
         return {
-          user: null,
+          user: [],
           logged_in: false,
           error: error.response.data.error,
         };
@@ -66,7 +66,7 @@ export const registerSlice = createSlice({
       return {
         user,
         logged_in: false,
-        error: null,
+        error: [],
       };
     },
   },

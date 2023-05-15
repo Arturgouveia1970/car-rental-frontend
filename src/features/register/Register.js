@@ -93,78 +93,69 @@
 // export default Register;
 
 /* eslint linebreak-style: ["error", "windows"] */
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 // import Button from '../components/button/Button';
 // import './Login.scss';
 
 const Register = () => {
-  const name = useState();
-  const email = useState();
-  const password = useState();
-  const loginForm = useRef();
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const [responseMsg, setResponseMsg] = useState('');
+  const [loading, setLoading] = useState();
 
-  const [isActive, setActive] = useState(true);
+  // const [isActive, setActive] = useState(true);
 
-  const ToggleClass = () => {
-    setActive(false);
-  };
+  // const ToggleClass = () => {
+  //   setActive(false);
+  // };
 
   const sendForm = async (e) => {
     e.preventDefault();
-    const signupOptions = {
-      method: 'post',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(
-        {
-          name: name.current.value.trim(),
-          email: email.current.value.trim(),
-          password: password.current.value,
-        },
-      ),
+    setLoading(true);
+    const user = {
+      name,
+      email,
+      password,
     };
 
-    await fetch('https://dreamcars.onrender.com/api/v1/users', signupOptions);
-
-    const loginOptions = {
-      method: 'post',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(
-        {
-          email: email.current.value.trim(),
-          password: password.current.value,
-        },
-      ),
-    };
-
-    const dataResponse = await fetch('https://dreamcars.onrender.com/api/v1/users/sign_in', loginOptions);
-    if (dataResponse.ok) {
-      const userData = await dataResponse.json();
-      localStorage.setItem('current_user', JSON.stringify(userData));
-      window.location.href = '/';
-    } else {
-      ToggleClass();
-    }
+    axios
+      .post('https://dreamcars.onrender.com/api/v1/users', user)
+      .then((response) => {
+        setLoading(false);
+        setName('');
+        setEmail('');
+        setPassword('');
+        setResponseMsg(response.data.success);
+      })
+      .catch((err) => {
+        setLoading(false);
+        setResponseMsg(err.response.data.error);
+      });
   };
 
   return (
     <div className="container page-login">
-      <form action="Post" className="login-form" method="POST" id="signup-form" ref={loginForm}>
+      <form action="Post" className="login-form container-fluid vw-100 d-flex flex-column align-items-center justify-content-center" method="POST" id="signup-form" ref={sendForm}>
         <h2>SIGNUP</h2>
 
         <div className="add-padding-below">
-          <span
+          {/* <span
             className={isActive ? 'error-message' : 'error-message active'}
           >
             This username or email already exists
-          </span>
+          </span> */}
           <input
             // value={name}
             type="text"
             id="name"
-            name="name"
+            // name="name"
+            value={name}
             className="form-field"
             placeholder="Name"
+            onChange={(e) => setName(e.target.value)}
             required
           />
         </div>
@@ -174,9 +165,11 @@ const Register = () => {
             // value={email}
             type="email"
             id="email"
-            name="email"
+            // name="email"
+            value={email}
             className="form-field"
             placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>
@@ -186,37 +179,49 @@ const Register = () => {
             // ref={password}
             type="text"
             id="password"
-            name="password"
+            // name="password"
+            value={password}
             className="form-field"
             placeholder="Password"
+            onChange={(e) => setPassword(e.target.value)}
             required
           />
         </div>
-
-        <p className="signin-message">
-          Already have an account?
-          <Link to="/login">
-            LOGIN
-          </Link>
-        </p>
-
-        <div className="form-bottom-bar">
-          {/* <Button
-            btnAxn={sendForm}
-            label="Signup"
-            size="main"
-            color="dark"
-          /> */}
+        {loading ? (
           <button
-            type="submit"
-            className="btn btn-primary mb-3"
-            onClick={sendForm}
+            type="button"
+            className="btn px-4 ms-4 disabled"
           >
-            Sign Up
+            <i className="fa-solid fa-spinner fa-spin" />
           </button>
-        </div>
-      </form>
+        ) : (
+          <div>
+            <p className="signin-message">
+              Already have an account?
+              <Link to="/login">
+                LOGIN
+              </Link>
+            </p>
 
+            <div className="form-bottom-bar">
+              {/* <Button
+                btnAxn={sendForm}
+                label="Signup"
+                size="main"
+                color="dark"
+              /> */}
+              <button
+                type="submit"
+                className="btn btn-primary mb-3"
+                onClick={sendForm}
+              >
+                Sign Up
+              </button>
+            </div>
+          </div>
+        )}
+      </form>
+      <p className="fs-5 fw-semibold">{responseMsg}</p>
     </div>
   );
 };

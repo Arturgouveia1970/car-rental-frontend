@@ -73,14 +73,15 @@ const CarDetails = () => {
         <div className={styles.detail}>
           <h2>{car.model}</h2>
           <div className={styles.carYear}>
-            <p>Year: </p>
+            {/* <p>Year: </p> */}
             <p>{car.year}</p>
           </div>
           <div className={styles.price}>
-            <p>Price p/d: </p>
             <p className={styles.priceColor}>
               $
               {car.price}
+              {' '}
+              per/day
             </p>
           </div>
           <NavLink to={`/reserve/${id}`} className={styles.btncontainer}>
