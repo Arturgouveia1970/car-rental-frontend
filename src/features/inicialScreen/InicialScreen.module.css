@@ -1,0 +1,53 @@
+.splashbg {
+  position: relative;
+  min-height: 100vh;
+  margin-left: 0;
+}
+
+.splashbg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('http://1.bp.blogspot.com/-3QRsjl0wan4/Uk0X7hIP0eI/AAAAAAAAAHY/oE8w8r3oRvs/s1600/Super+sport+cars+wallpapers+2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.splashbg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffb400;
+  opacity: 0.8;
+}
+
+.header {
+  z-index: 3;
+  font-family: var(--pacifico);
+  font-size: 75px;
+  letter-spacing: 1px;
+  margin: 130px 0 100px;
+}
+
+.btncontainer {
+  margin-top: 0;
+  z-index: 3;
+}
+
+@media screen and (max-width: 768px) {
+  .splashbg {
+    margin-left: 0;
+  }
+
+  .header {
+    font-size: 50px;
+  }
+}

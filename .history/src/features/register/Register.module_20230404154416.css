@@ -1,0 +1,31 @@
+.container {
+  margin-left: 20px;
+  background-image: url('http://1.bp.blogspot.com/-3QRsjl0wan4/Uk0X7hIP0eI/AAAAAAAAAHY/oE8w8r3oRvs/s1600/Super+sport+cars+wallpapers+2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  height: 100vh;
+}
+
+.header {
+  margin-top: 80px;
+}
+
+.form {
+  width: 350px;
+}
+
+.errorMsg {
+  color: red;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin-left: 0;
+  }
+
+  .form {
+    width: 250px;
+  }
+}

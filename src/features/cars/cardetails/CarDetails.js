@@ -3,7 +3,6 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { NavLink, useParams } from 'react-router-dom';
 import axios from 'axios';
 import styles from './CarDetails.module.css';
-// import Sidebar from '../../common/sidebar/Sidebar';
 
 const CarDetails = () => {
   const { id } = useParams();
@@ -41,7 +40,7 @@ const CarDetails = () => {
   // useEffect(() => {
   //   setLoading(true);
   //   axios
-  //     .get(`https://carrental2.onrender.com/api/v1/cars/${id}`)
+  //     .get(`https://dreamcars.onrender.com/api/v1/cars/${id}`)
   //     .then((response) => {
   //       setCar(response.data);
   //       console.log(response.data);
@@ -49,25 +48,40 @@ const CarDetails = () => {
   //     });
   // }, [id]);
 
+  // const myStyle = {
+  //   backgroungImage: `url( ${car.image})`,
+  //   height: '100vh',
+  //   backgroungSyze: 'cover',
+  //   backgroundrepeat: 'no-repeat',
+  // };
+
   return (
     <>
-      {/* {newLocal} */}
-      <h2 className={styles.title}>CAR DETAILS</h2>
-      <div className={styles.detailContainer}>
-        <div className={styles.car}>
-          <img src={car.image} alt={car.model} />
-        </div>
+      <div
+        style={{
+          display: 'flex',
+          height: '100vh',
+          backgroundImage: `url(${car.image})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          backgroundPosition: '10%',
+          maginLeft: '10%',
+          justifyContent: 'flex-start',
+        }}
+        className={styles.detailContainer}
+      >
         <div className={styles.detail}>
           <h2>{car.model}</h2>
           <div className={styles.carYear}>
-            <p>year:</p>
+            {/* <p>Year: </p> */}
             <p>{car.year}</p>
           </div>
           <div className={styles.price}>
-            <p>Price P/D: </p>
             <p className={styles.priceColor}>
               $
               {car.price}
+              {' '}
+              per/day
             </p>
           </div>
           <NavLink to={`/reserve/${id}`} className={styles.btncontainer}>
