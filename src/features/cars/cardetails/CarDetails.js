@@ -15,7 +15,7 @@ const CarDetails = () => {
     setLoading(true);
     // await axios get function
     await axios
-      .get(`https://dreamcars.onrender.com/api/v1/cars/${id}`)
+      .get(`https://dreamcars2.onrender.com/api/v1/cars/${id}`)
       .then((response) => {
         setCar(response.data);
         // console.log(response.data);
@@ -41,7 +41,7 @@ const CarDetails = () => {
   // useEffect(() => {
   //   setLoading(true);
   //   axios
-  //     .get(`https://carrental2.onrender.com/api/v1/cars/${id}`)
+  //     .get(`https://dreamcars2.onrender.com/api/v1/cars/${id}`)
   //     .then((response) => {
   //       setCar(response.data);
   //       console.log(response.data);

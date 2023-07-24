@@ -26,7 +26,7 @@ const Newcar = () => {
     };
 
     axios
-      .post('https://dreamcars.onrender.com/api/v1/cars', car)
+      .post('https://dreamcars2.onrender.com/api/v1/cars', car)
       .then((response) => {
         setLoading(false);
         setModel('');
