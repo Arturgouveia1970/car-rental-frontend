@@ -69,12 +69,12 @@
 
 .reservebtn {
   justify-items: center;
-  
 }
 
 .btncontainer {
   display: flex;
   justify-content: center;
+  text-decoration: none;
 }
 
 .btncontainer button {

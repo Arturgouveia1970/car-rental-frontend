@@ -25,11 +25,11 @@
 
 .carImg {
   min-height: 350px;
-  max-height: 351px;
+  max-height: 451px;
   object-fit: cover;
   min-width: 250px;
-  max-width: 250px;
-  border-radius: 20px;
+  max-width: 340px;
+  border-radius: 150px;
 }
 
 .price {
