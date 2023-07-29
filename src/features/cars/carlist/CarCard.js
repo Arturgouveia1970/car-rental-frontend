@@ -12,8 +12,8 @@ const Car = ({
         <img src={image} alt={model} className={styles.carImg} />
       </div>
       <div className="model-detail d-flex flex-column justify.content.center align-items-center">
+        <h5 className="h6 mt-3">{year}</h5>
         <h3 className="h4 mt-3">{model}</h3>
-        <h5 className="h6 pt-1">{year}</h5>
         <h5 className={styles.price}>
           $
           {' '}

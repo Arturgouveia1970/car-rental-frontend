@@ -38,17 +38,6 @@ const CarDetails = () => {
     );
   }
 
-  // useEffect(() => {
-  //   setLoading(true);
-  //   axios
-  //     .get(`https://dreamcars2.onrender.com/api/v1/cars/${id}`)
-  //     .then((response) => {
-  //       setCar(response.data);
-  //       console.log(response.data);
-  //       setLoading(false);
-  //     });
-  // }, [id]);
-
   return (
     <>
       {/* {newLocal} */}
@@ -58,17 +47,19 @@ const CarDetails = () => {
           <img src={car.image} alt={car.model} />
         </div>
         <div className={styles.detail}>
-          <h2>{car.model}</h2>
+          <div className={styles.carModel}>
+            <h2>{car.model}</h2>
+          </div>
           <div className={styles.carYear}>
-            <p>year:</p>
+            {/* <p>year:</p> */}
             <p>{car.year}</p>
           </div>
           <div className={styles.price}>
-            <p>Price P/D: </p>
             <p className={styles.priceColor}>
               $
               {car.price}
             </p>
+            <p>pd </p>
           </div>
           <NavLink to={`/reserve/${id}`} className={styles.btncontainer}>
             <button type="button" className={styles.reservebtn}>

@@ -3,26 +3,34 @@
 .detailContainer {
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
-  margin: 20px;
+  flex-direction: column;
+  margin-left: 240px;
+  /* background-image: url("http://1.bp.blogspot.com/-3QRsjl0wan4/Uk0X7hIP0eI/AAAAAAAAAHY/oE8w8r3oRvs/s1600/Super+sport+cars+wallpapers+2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%; */
 }
 
 .title {
+  display: flex;
+  justify-content: center;
   text-align: center;
   margin-top: 35px;
+  margin-left: 200px;
 }
 
 .carYear {
   display: flex;
+  justify-content: center;
   gap: 0 10px;
-  background-color: #ecf0f1;
-  padding: 10px 20px 0 20px;
+  margin-top: 0px;
+  margin-left: 00px;
 }
 
 .price {
   display: flex;
+  justify-content: center;
   gap: 0 10px;
-  padding: 5px 0 0 18px;
 }
 
 .priceColor {
@@ -30,22 +38,28 @@
 }
 
 .car {
-  margin-left: 160px;
-  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
 }
 
 .car img {
+  display: flex;
+  justify-content: center;
   min-height: 450px;
   max-height: 451px;
-  object-fit: cover;
   min-width: 610px;
-  max-width: 610px;
-  border-radius: 20px;
+  border-radius: 50%;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
 }
 
 .detail h2 {
-  margin-left: 20px;
-  margin-bottom: 30px;
   font-weight: bold;
 }
 
@@ -57,16 +71,9 @@
   justify-items: center;
 }
 
-.detail {
-  position: relative;
-  padding: 0;
-}
-
 .btncontainer {
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
-  padding: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .btncontainer button {
@@ -80,6 +87,11 @@
   font-weight: bold;
 }
 
+.carModel {
+  display: flex;
+  justify-content: center;
+}
+
 .btncontainer button:hover {
   color: black;
   background-color: #caf149;
@@ -87,6 +99,7 @@
 
 @media screen and (max-width: 768px) {
   .detailContainer {
+    display: flex;
     flex-direction: column;
     margin: auto;
     text-align: center;
@@ -115,7 +128,6 @@
   }
 
   .detail {
-    position: relative;
     padding: 10px;
   }
 
@@ -127,19 +139,13 @@
   }
 
   .carYear {
-    display: flex;
+    justify-content: center;
     gap: 0 10px;
     background-color: #ecf0f1;
   }
 
   .btncontainer button {
     margin: 30px 0;
-  }
-
-  .detail h2 {
-    margin: auto;
-    margin-bottom: 30px;
-    font-weight: bold;
   }
 }
 
