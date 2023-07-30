@@ -23,7 +23,7 @@ const Reserve = () => {
     e.preventDefault();
     if (startDate && city) {
       axios
-        .get(`https://dreamcars.onrender.com/api/v1/users/${id}/reservations`)
+        .get(`https://dreamcars2.onrender.com/api/v1/users/${id}/reservations`)
         .then((response) => setCars(response.data));
       setLoading(true);
     }
@@ -35,7 +35,7 @@ const Reserve = () => {
       setLoading(true);
       axios
         .post(
-          `https://dreamcars.onrender.com/api/v1/users/${id}/reservations`,
+          `https://dreamcars2.onrender.com/api/v1/users/${id}/reservations`,
         )
         .then(() => {
           setReserved(true);
