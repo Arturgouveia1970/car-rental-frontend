@@ -2,7 +2,7 @@
   display: flex;
   height: 100vh;
   margin-top: 0%;
-  margin-left: 240;
+  margin-left: 0px;
   background-image: url("http://1.bp.blogspot.com/-3QRsjl0wan4/Uk0X7hIP0eI/AAAAAAAAAHY/oE8w8r3oRvs/s1600/Super+sport+cars+wallpapers+2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,7 +25,6 @@
 .textctn .zindex {
   display: flex;
   justify-content: center;
-  margin-left: 25%;
 }
 
 .cnt::before {
@@ -111,9 +110,27 @@
 
   .textctn {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    margin-left: -50%;
+    margin-left: 0%;
     width: 100vh;
+    height: 100vh;
   }
+
+  .textctn .zindex {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* .txtHeader {
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+  } */
+
+  /* .form {
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+  } */
 }

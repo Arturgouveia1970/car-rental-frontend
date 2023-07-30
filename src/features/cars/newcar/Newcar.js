@@ -45,15 +45,17 @@ const Newcar = () => {
   return (
     <div className={`${styles.cnt} container-fluid vh-100 d-flex flex-column align-items-center`}>
       <div className={`${styles.textctn}`}>
-        <h2 className={`${styles.zindex} fs-1 d-flex text-white align-items-center`}>Add Car</h2>
-        <p className={`${styles.zindex} fs-5 d-flex text-white text-center align-items-center`}>
-          You&apos;ve got a fancy car from which you want to make some extra
-          bucks? Add it on our website!
-        </p>
-        <hr className={styles.hr} />
-        <p className={`${styles.zindex} mb-5 fs-5 text-white`}>
-          Fill the details of your car.
-        </p>
+        <div className={`${styles.txtHeader}`}>
+          <h2 className={`${styles.zindex} fs-1 d-flex text-white align-items-center justify-content-center`}>Add Car</h2>
+          <p className={`${styles.zindex} fs-5 d-flex text-white text-center align-items-center`}>
+            You&apos;ve got a fancy car from which you want to make some extra
+            bucks? Add it on our website!
+          </p>
+          <hr className={styles.hr} />
+          <p className={`${styles.zindex} mb-5 fs-5 text-white`}>
+            Fill the details of your car.
+          </p>
+        </div>
         <form
           className={`${styles.zindex} ${styles.form} d-flex justify-content-center mb-0 align-items-end`}
           onSubmit={submitCar}
