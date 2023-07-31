@@ -147,11 +147,11 @@
 
   .title {
     text-align: center;
-    margin-top: 60px;
+    margin-top: 40px;
   }
 
   .car {
-    margin: auto;
+    margin: -25px 0;
     align-items: center;
   }
 
@@ -170,12 +170,17 @@
   }
 
   .carModel {
-    margin: -25px 0;
+    margin: -5px 0;
   }
 
   .carYear {
     justify-content: center;
-    gap: 0 10px;
+    margin: -15px 0;
+    /* gap: 0 10px; */
+  }
+
+  .price {
+    margin: 5px 0;
   }
 
   .btncontainer button {
