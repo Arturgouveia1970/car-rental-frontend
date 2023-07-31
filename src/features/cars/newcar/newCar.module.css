@@ -97,7 +97,7 @@
   .html {
     padding: 0;
     margin: 0;
-    overflow-y: hidden;
+    overflow-y: hidden !important;
   }
 
   .input {
@@ -121,6 +121,29 @@
   .textctn .zindex {
     display: flex;
     justify-content: center;
+  }
+
+  .txtHeader h2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -290px;
+    /* margin-left: 320px; */
+  }
+
+  .txtHeader p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 250px; */
+    width: 350px;
+  }
+
+  .form {
+    display: flex;
+    margin-top: 10%;
   }
 
   /* .txtHeader {
