@@ -75,3 +75,9 @@
 .carlist {
   list-style-type: none;
 }
+
+@media screen and (max-width: 550px) {
+  body {
+    overflow-x: hidden;
+  }
+}

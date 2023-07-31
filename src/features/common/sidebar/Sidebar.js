@@ -8,7 +8,7 @@ const Sidebar = () => (
     <div
       className={`${styles.sidebarCnt} container-fluid overflow-hidden d-none d-md-block position-fixed start-0 top-0`}
     >
-      <div className="vh-100 overflow-auto w-100">
+      <div className="vh-100 overflow-hidden w-100">
         <div className={`${styles.navbarContainer} vh-100 pt-5`}>
           <div className="d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start">
             <NavLink
@@ -102,7 +102,7 @@ const Sidebar = () => (
           </li>
           <li className="nav-item mb-2">
             <NavLink
-              to="/reservations"
+              to="/myreservations"
               className={`${styles.mobileNavLink} nav-link`}
             >
               My Reservations
@@ -110,7 +110,7 @@ const Sidebar = () => (
           </li>
           <li className="nav-item mb-2">
             <NavLink
-              to="/add-car"
+              to="/newcar"
               className={`${styles.mobileNavLink} nav-link`}
             >
               Add Car
@@ -118,7 +118,7 @@ const Sidebar = () => (
           </li>
           <li className="nav-item mb-2">
             <NavLink
-              to="/delete-car"
+              to="/deletecar"
               className={`${styles.mobileNavLink} nav-link`}
             >
               Delete Car
@@ -152,9 +152,9 @@ const Sidebar = () => (
             <i className="fa-solid fa-bars" />
           </span>
         </button>
-        <h1 className={`${styles.brandName} navbar-brand fs-2 fw-semibold`}>
+        {/* <h1 className={`${styles.brandName} navbar-brand fs-2 fw-semibold`}>
           DreamCars
-        </h1>
+        </h1> */}
       </div>
     </nav>
   </>

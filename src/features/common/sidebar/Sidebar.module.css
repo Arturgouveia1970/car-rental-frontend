@@ -17,12 +17,12 @@
 }
 
 .mobileMenu {
-  background-color: #fefefe;
+  background-color: #3b6ebb;
 }
 
 .mobileNav {
-  background-color: #fefefe;
-  border-bottom: 1px solid #f0f5f2;
+  background-color: #3b6ebb;
+  /* border-bottom: 1px solid #f0f5f2; */
 }
 
 .mobileNavLink {
@@ -48,4 +48,10 @@
 .img {
   max-width: 230px;
   max-height: 250px;
+}
+
+@media screen and (max-width: 550px) {
+  .sidebarCnt {
+    background-color: blue;
+  }
 }

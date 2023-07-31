@@ -93,10 +93,11 @@
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
   .html {
     padding: 0;
     margin: 0;
+    overflow-y: hidden;
   }
 
   .input {

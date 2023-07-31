@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   margin-left: 20%;
+  padding: 0;
 }
 
 .carCnt {
@@ -30,4 +31,23 @@
 .errorMsg {
   color: red;
   font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .delarea {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .carImg {
+    min-height: 350px;
+    max-height: 351px;
+    object-fit: cover;
+    min-width: 250px;
+    max-width: 250px;
+    border-radius: 20px;
+  }
 }

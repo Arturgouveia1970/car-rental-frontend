@@ -31,6 +31,8 @@
   display: flex;
   justify-content: center;
   gap: 0 10px;
+  background-color: var(--primary-green);
+  color: rgba(2, 15, 17, 0.425);
 }
 
 .priceColor {
@@ -104,6 +106,7 @@
     flex-direction: column;
     margin: auto;
     text-align: center;
+    overflow-y: hidden !important;
   }
 
   .title {
@@ -125,7 +128,7 @@
     object-fit: cover;
     min-width: 350px;
     max-width: 350px;
-    border-radius: 10px;
+    border-radius: 30px;
   }
 
   .detail {
@@ -134,7 +137,7 @@
 
   .btncontainer {
     position: relative;
-    bottom: 0;
+    bottom: 0px;
     right: 10px;
     padding: 10px;
   }
@@ -142,11 +145,10 @@
   .carYear {
     justify-content: center;
     gap: 0 10px;
-    background-color: #ecf0f1;
   }
 
   .btncontainer button {
-    margin: 30px 0;
+    margin: 0px 0;
   }
 }
 
