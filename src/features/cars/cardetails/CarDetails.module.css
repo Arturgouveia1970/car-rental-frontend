@@ -100,56 +100,6 @@
   background-color: #caf149;
 }
 
-@media screen and (max-width: 768px) {
-  .detailContainer {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    text-align: center;
-    overflow-y: hidden !important;
-  }
-
-  .title {
-    text-align: center;
-    margin-top: 100px;
-  }
-
-  .car {
-    margin: auto;
-    align-items: center;
-  }
-
-  .car img {
-    justify-content: center;
-    min-height: 450px;
-    max-height: 451px;
-    object-fit: cover;
-    min-width: 350px;
-    max-width: 350px;
-    border-radius: 30px;
-  }
-
-  .detail {
-    padding: 10px;
-  }
-
-  .btncontainer {
-    position: relative;
-    bottom: 0px;
-    right: 10px;
-    padding: 10px;
-  }
-
-  .carYear {
-    justify-content: center;
-    gap: 0 10px;
-  }
-
-  .btncontainer button {
-    margin: 0px 0;
-  }
-}
-
 @media screen and (max-width: 890px) {
   .detailContainer {
     flex-direction: column;
@@ -176,7 +126,7 @@
   }
 
   .btncontainer button {
-    margin: 30px 0;
+    margin: 5px 0;
   }
 
   .detail h2 {
@@ -185,3 +135,54 @@
     font-weight: bold;
   }
 }
+
+@media screen and (max-width: 568px) {
+  .detailContainer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    overflow-y: hidden !important;
+  }
+
+  .title {
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  .car {
+    margin: auto;
+    align-items: center;
+  }
+
+  .car img {
+    justify-content: center;
+    min-height: 450px;
+    max-height: 451px;
+    object-fit: cover;
+    min-width: 350px;
+    max-width: 350px;
+    border-radius: 150px;
+  }
+
+  .detail {
+    padding: 0px;
+  }
+
+  /* .btncontainer {
+    position: relative;
+    bottom: 0px;
+    right: 10px;
+    padding: 10px;
+  } */
+
+  .carYear {
+    justify-content: center;
+    gap: 0 10px;
+  }
+
+  .btncontainer button {
+    margin: -10px 0;
+  }
+}
+
