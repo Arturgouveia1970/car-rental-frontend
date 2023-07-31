@@ -111,8 +111,7 @@
 
   .title {
     text-align: center;
-    margin: auto;
-    margin-top: 20px;
+    margin-top: 100px;
   }
 
   .car {
@@ -121,7 +120,6 @@
   }
 
   .car img {
-    margin-top: 50px;
     justify-content: center;
     min-height: 450px;
     max-height: 451px;
