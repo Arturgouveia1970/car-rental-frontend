@@ -37,15 +37,15 @@
 
 @media screen and (max-width: 550px) {
   .slider-control-centerright button {
-    padding: 0 1.25rem;
+    padding: 0 1.20rem;
   }
 
   .slider-control-centerleft button {
-    padding: 0 1.25rem;
+    padding: 0 1.20rem;
   }
 
   .slider-container {
-    margin-right: 100px;
-    margin-left: 120px;
+    margin-right: 80px;
+    margin-left: 50px;
   }
 }
