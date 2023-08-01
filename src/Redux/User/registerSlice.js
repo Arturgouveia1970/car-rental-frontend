@@ -38,7 +38,7 @@ export const login = createAsyncThunk(
     const result = axios
       .get(`https://dreamcars2.onrender.com/api/v1/users/sign_in/${email}`)
       .then((response) => {
-        localStorage.getItem('user', JSON.parse(response.data));
+        localStorage.setItem('user', JSON.stringify(response.data));
         window.location.reload();
       })
       .catch((error) => {
