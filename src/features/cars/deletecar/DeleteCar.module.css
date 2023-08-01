@@ -43,6 +43,7 @@
   }
 
   .carImg {
+    margin-top: 50px;
     min-height: 350px;
     max-height: 351px;
     object-fit: cover;
