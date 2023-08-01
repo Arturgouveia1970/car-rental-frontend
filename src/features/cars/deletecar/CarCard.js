@@ -30,7 +30,7 @@ const DeleteCarUi = ({
         </div>
         <div className="model-detail d-flex flex-column justify-content-center align-items-center">
           <h3 className="h4 mt-3">{model}</h3>
-          <div className="d-flex flex-row justify-content-center align-items-center gap-2 mt-2">
+          <div className="d-flex flex-row justify-content-center align-items-center gap-0 mt-0">
             <h5 className="h6 pt-1">{year}</h5>
           </div>
         </div>
