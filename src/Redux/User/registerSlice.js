@@ -18,7 +18,6 @@ export const register = createAsyncThunk(
       )
       .then((response) => {
         localStorage.setItem('user', JSON.stringify(response.data));
-        console.log(response.data);
         window.location.reload();
       })
       .catch((error) => {
