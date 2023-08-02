@@ -7,15 +7,16 @@ import styles from './Login.module.css';
 /* eslint-disable jsx-a11y/label-has-associated-control */
 const Login = () => {
   const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
 
   const formSubmit = (e) => {
     e.preventDefault();
-    if (email) {
+    if (email && password) {
       setLoading(true);
-      dispatch(login({ email, setLoading }));
+      dispatch(login({ email, password, setLoading }));
     }
   };
 
@@ -40,6 +41,18 @@ const Login = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
           <label htmlFor="floatingUsername">Email</label>
+        </div>
+        <div className="form-floating mb-3">
+          <input
+            type="text"
+            className="form-control"
+            id="floatingUsername"
+            placeholder="Password"
+            value={password}
+            required
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <label htmlFor="floatingUsername">Password</label>
         </div>
         {loading ? (
           <button type="button" className="btn btn-primary disabled mb-3">
