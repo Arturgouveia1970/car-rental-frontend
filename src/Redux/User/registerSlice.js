@@ -14,7 +14,7 @@ export const register = createAsyncThunk(
   }) => {
     const result = axios
       .post(
-        `https://dreamcars2.onrender.com/api/v1/register/${name}/${email}/${password}`,
+        `https://dreamcars2.onrender.com/api/v1/sign_up/${name}/${email}/${password}`,
       )
       .then((response) => {
         localStorage.setItem('user', JSON.stringify(response.data));
@@ -36,7 +36,7 @@ export const login = createAsyncThunk(
   'user/login',
   ({ email, password, setLoading }) => {
     const result = axios
-      .get(`https://dreamcars2.onrender.com/api/v1/login/${email}/${password}`)
+      .get(`https://dreamcars2.onrender.com/api/v1/sign_in/${email}/${password}`)
       .then((response) => {
         localStorage.setItem('user', JSON.stringify(response.data));
         window.location.reload();
