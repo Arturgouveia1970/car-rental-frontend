@@ -9,16 +9,16 @@ const Register = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
-  const [password, setPassword] = useState('');
+  // const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const user = useSelector((state) => state.user);
 
   const formSubmit = (e) => {
     e.preventDefault();
-    if (email && name && password) {
+    if (email && name) {
       setLoading(true);
       dispatch(register({
-        email, name, password, setLoading,
+        email, name, setLoading,
       }));
     }
   };
@@ -43,7 +43,7 @@ const Register = () => {
             required
             onChange={(e) => setName(e.target.value)}
           />
-          <label htmlFor="floatingName">Name</label>
+          <label htmlFor="floatingName">name</label>
         </div>
         <div className="form-floating mb-3">
           <input
@@ -55,9 +55,9 @@ const Register = () => {
             required
             onChange={(e) => setEmail(e.target.value)}
           />
-          <label htmlFor="floatingInput">Email address</label>
+          <label htmlFor="floatingInput">email address</label>
         </div>
-        <div className="form-floating mb-3">
+        {/* <div className="form-floating mb-3">
           <input
             type="text"
             className="form-control"
@@ -68,7 +68,7 @@ const Register = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <label htmlFor="floatingUsername">Password</label>
-        </div>
+        </div> */}
         {loading ? (
           <button type="button" className="btn btn-primary disabled mb-3">
             <i className="fa-solid fa-spinner fa-spin" />

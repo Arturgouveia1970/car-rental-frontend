@@ -13,7 +13,7 @@ const Splash = () => (
           Log in
         </button>
       </NavLink>
-      <NavLink to="signup">
+      <NavLink to="register">
         <button type="button" className="btn btn-success ms-4 fs-4">
           Sign up
         </button>

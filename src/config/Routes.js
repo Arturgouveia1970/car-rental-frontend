@@ -19,7 +19,7 @@ const routes = [
     element: <Login />,
   },
   {
-    path: '/signup',
+    path: '/register',
     element: <Register />,
   },
   {
@@ -42,7 +42,7 @@ const routes = [
         element: <Newcar />,
       },
       {
-        path: '/delete-car',
+        path: '/deletecar',
         element: <DeleteCar />,
       },
       {

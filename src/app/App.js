@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from 'react';
 import { useRoutes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -12,7 +13,6 @@ const App = () => {
 
   useEffect(() => {
     dispatch(checkUser());
-    // eslint-disable-next-line
   }, []);
 
   return (

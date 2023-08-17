@@ -7,16 +7,16 @@ import styles from './Login.module.css';
 /* eslint-disable jsx-a11y/label-has-associated-control */
 const Login = () => {
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  // const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
 
   const formSubmit = (e) => {
     e.preventDefault();
-    if (email && password) {
+    if (email) {
       setLoading(true);
-      dispatch(login({ email, password, setLoading }));
+      dispatch(login({ email, setLoading }));
     }
   };
 
@@ -40,9 +40,9 @@ const Login = () => {
             required
             onChange={(e) => setEmail(e.target.value)}
           />
-          <label htmlFor="floatingUsername">Email</label>
+          <label htmlFor="floatingUsername">email address</label>
         </div>
-        <div className="form-floating mb-3">
+        {/* <div className="form-floating mb-3">
           <input
             type="text"
             className="form-control"
@@ -53,7 +53,7 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <label htmlFor="floatingUsername">Password</label>
-        </div>
+        </div> */}
         {loading ? (
           <button type="button" className="btn btn-primary disabled mb-3">
             <i className="fa-solid fa-spinner fa-spin" />
@@ -65,7 +65,7 @@ const Login = () => {
         )}
       </form>
       <p className={`${styles.errorMsg} fs-5`}>{user.error}</p>
-      <NavLink className={styles.button} to="/signup">
+      <NavLink className={styles.button} to="/register">
         <span className="btn btn-info mb-0">Sign up</span>
       </NavLink>
     </div>
