@@ -17,7 +17,7 @@ export const register = createAsyncThunk(
         `https://dreamcars2.onrender.com/api/v1/register/${name}/${email}`,
       )
       .then((response) => {
-        localStorage.setItem('user', JSON.stringify(response.data.data));
+        localStorage.setItem('user', JSON.stringify(response.data));
         // eslint-disable-next-line
         console.log(response.data);
         window.location.reload();
