@@ -78,7 +78,7 @@ const CarDetails = () => {
           </div>
           <NavLink to={`/reserve/${id}`} className={styles.btncontainer}>
             <button type="button" className={styles.reservebtn}>
-              <i className="fa-solid fa-car-side me-3" />
+              <i className="fa-solid fa-car-side me-4" />
               Reserve
             </button>
           </NavLink>
