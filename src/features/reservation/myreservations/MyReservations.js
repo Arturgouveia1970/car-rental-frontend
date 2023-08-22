@@ -19,7 +19,7 @@ const MyReservations = () => {
         setReservations(response.data.reservations);
         setLoading(false);
       });
-  }, []);
+  }, [user.user.id]);
 
   if (reservations.length <= 0) {
     if (loading) {
