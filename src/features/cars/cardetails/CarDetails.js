@@ -43,7 +43,7 @@ const CarDetails = () => {
       .get(`https://dreamcars2.onrender.com/api/v1/car/${id}`)
       .then((response) => setCar(response.data.car));
     setLoading(false);
-  }, []);
+  }, [id]);
 
   if (loading) {
     return (
