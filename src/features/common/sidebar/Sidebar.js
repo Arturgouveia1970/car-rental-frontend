@@ -45,7 +45,7 @@ const Sidebar = () => {
                   </NavLink>
                 </li>
                 <li className="w-100">
-                  <NavLink to="/myreservations" className="nav-link mb-2 fs-5">
+                  <NavLink to="/reservation" className="nav-link mb-2 fs-5">
                     <i className="fa-solid fa-calendar-days me-2" />
                     <span className="ms-1 d-none d-sm-inline">
                       My Reservations
@@ -108,7 +108,7 @@ const Sidebar = () => {
             </li>
             <li className="nav-item mb-2">
               <NavLink
-                to="/myreservations"
+                to="/reservation"
                 className={`${styles.mobileNavLink} nav-link`}
               >
                 My Reservations
@@ -130,7 +130,17 @@ const Sidebar = () => {
                 Delete Car
               </NavLink>
             </li>
-            <li className="w-100 nav-link mb-2 mt-2">
+            <li className="nav-item mb-2">
+              <button
+                type="button"
+                className={`${styles.mobileNavLink} nav-link btn btn-danger`}
+                onClick={() => logout()}
+              >
+                <i className="fa-solid fa-arrow-right-from-bracket me-2" />
+                Logout
+              </button>
+            </li>
+            {/* <li className="w-100 nav-link mb-2 mt-2">
               <button
                 type="button"
                 className="btn btn-danger d-none d-sm-inline fs-5"
@@ -139,7 +149,7 @@ const Sidebar = () => {
                 <i className="fa-solid fa-arrow-right-from-bracket me-2" />
                 Logout
               </button>
-            </li>
+            </li> */}
             {/* <li className="nav-item mb-2">
               <button
                 type="button"

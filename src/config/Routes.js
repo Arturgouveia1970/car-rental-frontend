@@ -34,7 +34,7 @@ const routes = [
         element: <Reserve />,
       },
       {
-        path: '/myreservations',
+        path: '/reservation',
         element: <MyReservations />,
       },
       {

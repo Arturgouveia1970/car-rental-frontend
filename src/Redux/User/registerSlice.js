@@ -20,6 +20,9 @@ export const register = createAsyncThunk(
         localStorage.setItem('user', JSON.stringify(response.data));
         // eslint-disable-next-line
         console.log(response.data);
+        // return {
+        //   user: true,
+        // };
         window.location.reload();
       })
       .catch((error) => {
@@ -38,7 +41,7 @@ export const login = createAsyncThunk(
   'user/login',
   ({ email, setLoading }) => {
     const result = axios
-      .get(`https://dreamcars2.onrender.com/api/v1/login/${email}`)
+      .get(`https://dreamcars2.onrender.com/api/v1/users/login/${email}`)
       .then((response) => {
         localStorage.setItem('user', JSON.stringify(response.data));
         window.location.reload();
