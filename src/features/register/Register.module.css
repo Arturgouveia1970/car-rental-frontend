@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('http://1.bp.blogspot.com/-3QRsjl0wan4/Uk0X7hIP0eI/AAAAAAAAAHY/oE8w8r3oRvs/s1600/Super+sport+cars+wallpapers+2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  min-height: 100vh;
+}
+
+.header {
+  margin-top: 80px;
+  color: aliceblue;
+}
+
+.form {
+  width: 350px;
+}
+
+.button {
+  margin-top: -70px;
+  margin-left: 270px;
+  color: blue;
+  border-radius: 15px;
+}
+
+.errorMsg {
+  color: red;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin-left: 0;
+  }
+
+  .form {
+    width: 250px;
+  }
+
+  .button {
+    margin-left: 35%;
+  }
+}

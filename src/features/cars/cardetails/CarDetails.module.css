@@ -5,6 +5,7 @@
   justify-content: space-between;
   flex-direction: column;
   margin-left: 240px;
+
   /* background-image: url("http://1.bp.blogspot.com/-3QRsjl0wan4/Uk0X7hIP0eI/AAAAAAAAAHY/oE8w8r3oRvs/s1600/Super+sport+cars+wallpapers+2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,8 +24,8 @@
   display: flex;
   justify-content: center;
   gap: 0 10px;
-  margin-top: 0px;
-  margin-left: 00px;
+  margin-top: 0;
+  margin-left: 0;
 }
 
 .price {
@@ -166,7 +167,7 @@
   }
 
   .detail {
-    padding: 0px;
+    padding: 0;
   }
 
   .carModel {
@@ -176,7 +177,6 @@
   .carYear {
     justify-content: center;
     margin: -15px 0;
-    /* gap: 0 10px; */
   }
 
   .price {
@@ -187,4 +187,3 @@
     margin: -10px 0;
   }
 }
-

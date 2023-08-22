@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
-// import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import axios from 'axios';
 import styles from './Reserve.module.css';
 
 const ReservationCars = ({
-  date, cars, city, setCars, setLoadingFirst,
+  cars, setCars, setLoadingFirst,
 }) => {
   const [car, setCar] = useState(cars[0]);
   const [reserved, setReserved] = useState(false);
   const [loading, setLoading] = useState(false);
-  // const user = useSelector((state) => state.user);
+  const user = useSelector((state) => state.user);
 
   const reserveCar = (e) => {
     e.preventDefault();
     axios
       .post(
-        `https://dreamcars2.onrender.com/api/v1/reservation/${car.id}/${city}/${date}`,
+        `https://dreamcars2.onrender.com/api/v1/users/${user.id}/reservations`,
       )
       .then(() => setReserved(true));
     setLoading(true);
@@ -45,7 +45,7 @@ const ReservationCars = ({
       </button>
       <h2 className={`${styles.zindex} fs-1 text-white`}>Reserve a car</h2>
       <p className={`${styles.zindex} fs-5 text-white`}>
-        Pull up in a fancy car for your next big event!
+        Take your dream car to your next big event!
       </p>
       <hr className={styles.hr} />
       <p className={`${styles.zindex} mb-5 fs-5 text-white`}>
@@ -80,16 +80,12 @@ const ReservationCars = ({
       </form>
 
       <div className={`${styles.zindex} ${styles.carCard} d-flex`}>
-        <img src={car.picture} alt="car" className={styles.carImg} />
+        <img src={car.image} alt="car" className={styles.carImg} />
         <div className={styles.carInfo}>
           <h3 className="fs-2 fs-sm-3 mb-2">
             <span>Model: </span>
             {car.model}
           </h3>
-          <h4 className="fs-5">
-            <span>Driver&apos;s name: </span>
-            {car.driver_name}
-          </h4>
           <h5 className="fs-5">
             $
             {' '}
@@ -105,8 +101,8 @@ ReservationCars.propTypes = {
   cars: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object])).isRequired,
   setCars: PropTypes.func.isRequired,
   setLoadingFirst: PropTypes.func.isRequired,
-  date: PropTypes.string.isRequired,
-  city: PropTypes.string.isRequired,
+  // date: PropTypes.string.isRequired,
+  // city: PropTypes.string.isRequired,
 };
 
 export default ReservationCars;
