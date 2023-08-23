@@ -18,6 +18,8 @@
 
 .mobileMenu {
   background-color: #3b6ebb;
+  margin: 0;
+  padding: 0;
 }
 
 .mobileNav {
@@ -52,7 +54,20 @@
 }
 
 @media screen and (max-width: 550px) {
+  .mobileMenu {
+    box-sizing: border-box;
+  }
+
   .sidebarCnt {
     background-color: blue;
+  }
+}
+
+@media screen and (max-width:390px) {
+  .mobileMenu {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 }

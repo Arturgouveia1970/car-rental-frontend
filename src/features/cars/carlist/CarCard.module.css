@@ -1,7 +1,7 @@
 .links {
   text-decoration: none;
   color: rgb(26, 26, 26);
-  transition: 0.1s;
+  transition: 0.2s;
 }
 
 .links:hover {
@@ -48,6 +48,26 @@
     object-fit: cover;
     min-width: 250px;
     max-width: 250px;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width:390px) {
+  .carCnt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 400px;
+    margin-left: 0;
+  }
+
+  .carImg {
+    min-height: 350px;
+    max-height: 351px;
+    object-fit: cover;
+    min-width: 200px;
+    max-width: 200px;
     border-radius: 20px;
   }
 }
