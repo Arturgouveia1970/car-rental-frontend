@@ -178,9 +178,6 @@ const Sidebar = () => {
               <i className="fa-solid fa-bars" />
             </span>
           </button>
-          <h1 className={`${styles.brandName} navbar-brand fs-2 fw-semibold`}>
-            DreamCars
-          </h1>
         </div>
       </nav>
     </>

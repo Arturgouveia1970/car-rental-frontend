@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --black-color: #212529;
 }
 
@@ -61,7 +61,7 @@
   color: var(--black-color);
 } */
 
-.car-card {
+/* .car-card {
   width: 100%;
   cursor: pointer;
   border-radius: 5px;
@@ -80,4 +80,4 @@
   body {
     overflow-x: hidden;
   }
-}
+}  */

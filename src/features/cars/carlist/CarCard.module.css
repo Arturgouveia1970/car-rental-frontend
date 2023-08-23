@@ -1,3 +1,7 @@
+html {
+  overflow-x: hidden;
+}
+
 .links {
   text-decoration: none;
   color: rgb(26, 26, 26);
@@ -53,12 +57,21 @@
 }
 
 @media screen and (max-width:390px) {
+  /* body {
+    overflow-x: hidden;
+  } */
+
+  .links {
+    width: 380px;
+  }
+
   .carCnt {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     min-height: 400px;
+    /* min-width: 400px; */
     margin-left: 0;
   }
 
@@ -66,7 +79,7 @@
     min-height: 350px;
     max-height: 351px;
     object-fit: cover;
-    min-width: 200px;
+    min-width: 210px;
     max-width: 200px;
     border-radius: 20px;
   }
