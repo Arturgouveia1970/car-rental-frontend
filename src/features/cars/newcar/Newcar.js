@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
-// import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import axios from 'axios';
 import styles from './newCar.module.css';
 // import Sidebar from '../../common/sidebar/Sidebar';
@@ -13,12 +13,13 @@ const Newcar = () => {
   const [year, setYear] = useState('');
   const [responseMsg, setResponseMsg] = useState('');
   const [loading, setLoading] = useState(false);
-  // const user = useSelector((state) => state.user);
+  const user = useSelector((state) => state.user);
 
   const submitCar = (e) => {
     e.preventDefault();
     setLoading(true);
     const car = {
+      user_id: user.user.id,
       model,
       year,
       image,
@@ -26,7 +27,7 @@ const Newcar = () => {
     };
 
     axios
-      .post('https://dreamcars2.onrender.com/api/v1/cars', car)
+      .post('https://dreamcars2.onrender.com/api/v1/car', car)
       .then((response) => {
         setLoading(false);
         setModel('');
@@ -40,7 +41,6 @@ const Newcar = () => {
         setResponseMsg(err.response.data.error);
       });
   };
-  // const newLocal = <Sidebar />;
 
   return (
     <div className={`${styles.cnt} container-fluid vh-100 d-flex flex-column align-items-center`}>

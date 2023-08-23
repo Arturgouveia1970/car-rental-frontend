@@ -1,28 +1,25 @@
 import React, { useState, useEffect } from 'react';
-// import { useParams } from 'react-router-dom';
 import axios from 'axios';
-// import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import CarCard from './CarCard';
-// import Sidebar from '../../common/sidebar/Sidebar';
 import styles from './DeleteCar.module.css';
 
 function DeleteCar() {
   // const { id } = useParams();
   const [cars, setCars] = useState([]);
   const [loading, setLoading] = useState(false);
-  // const user = useSelector((state) => state.user);
+  const user = useSelector((state) => state.user);
   useEffect(() => {
     setLoading(true);
     axios
-      .get('https://dreamcars2.onrender.com/api/v1/cars')
+      .get(`https://dreamcars2.onrender.com/api/v1/cars/${user.user.id}`)
       .then((response) => {
         setCars(response.data.cars);
         setLoading(false);
       })
       // eslint-disable-next-line
       .catch((error) => console.log(`Error: ${error}`));
-    // eslint-disable-next-line
-  }, []);
+  }, [user.user.id]);
 
   if (cars.length <= 0) {
     if (loading) {

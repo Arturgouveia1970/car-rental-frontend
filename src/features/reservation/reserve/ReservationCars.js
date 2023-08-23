@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import React, { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -6,7 +7,7 @@ import axios from 'axios';
 import styles from './Reserve.module.css';
 
 const ReservationCars = ({
-  cars, setCars, setLoadingFirst,
+  cars, city, start_date, end_date, setCars, setLoadingFirst,
 }) => {
   const [car, setCar] = useState(cars[0]);
   const [reserved, setReserved] = useState(false);
@@ -17,7 +18,7 @@ const ReservationCars = ({
     e.preventDefault();
     axios
       .post(
-        `https://dreamcars2.onrender.com/api/v1/users/${user.id}/reservations`,
+        `https://dreamcars2.onrender.com/api/v1/reservation/${user.user.id}/${car.id}/${city}/${start_date}/${end_date}`,
       )
       .then(() => setReserved(true));
     setLoading(true);
@@ -101,8 +102,9 @@ ReservationCars.propTypes = {
   cars: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object])).isRequired,
   setCars: PropTypes.func.isRequired,
   setLoadingFirst: PropTypes.func.isRequired,
-  // date: PropTypes.string.isRequired,
-  // city: PropTypes.string.isRequired,
+  start_date: PropTypes.string.isRequired,
+  end_date: PropTypes.string.isRequired,
+  city: PropTypes.string.isRequired,
 };
 
 export default ReservationCars;

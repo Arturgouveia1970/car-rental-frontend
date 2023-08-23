@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import React, { useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -8,8 +9,8 @@ import styles from './Reserve.module.css';
 /* eslint-disable jsx-a11y/label-has-associated-control */
 const Reserve = () => {
   const { id } = useParams();
-  const [startDate, setStartDate] = useState('');
-  const [endDate, setEndDate] = useState('');
+  const [start_date, setStartDate] = useState('');
+  const [end_date, setEndDate] = useState('');
   const [city, setCity] = useState('');
   const [car, setCar] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -21,9 +22,9 @@ const Reserve = () => {
 
   const findCars = (e) => {
     e.preventDefault();
-    if (startDate) {
+    if (start_date) {
       axios
-        .get(`https://dreamcars2.onrender.com/api/v1/reserve/cars/${startDate}`)
+        .get('https://dreamcars2.onrender.com/api/v1/cars')
         .then((response) => setCar(response.data.cars));
       setLoading(true);
     }
@@ -31,11 +32,11 @@ const Reserve = () => {
 
   const reserveCar = (e) => {
     e.preventDefault();
-    if (startDate && city) {
+    if (start_date && city) {
       setLoading(true);
       axios
         .post(
-          `https://dreamcars2.onrender.com/api/v1/reservation/${user.user.id}/${Number(id)}/${city}/${startDate}/${endDate}`,
+          `https://dreamcars2.onrender.com/api/v1/reservation/${user.user.id}/${Number(id)}/${city}/${start_date}/${end_date}`,
         )
         .then(() => {
           setReserved(true);
@@ -50,8 +51,8 @@ const Reserve = () => {
   if (car.length > 0) {
     return (
       <ReservationCars
-        startDate={startDate}
-        endDate={endDate}
+        start_date={start_date}
+        end_date={end_date}
         city={city}
         cars={car}
         setCars={setCar}
@@ -96,7 +97,7 @@ const Reserve = () => {
         </div>
         <div>
           <label htmlFor="date" className="form-label text-white ms-3">
-            Reservation starting date:
+            Starting date:
           </label>
           <input
             id="date"
@@ -104,7 +105,7 @@ const Reserve = () => {
             type="date"
             placeholder="Date"
             aria-label=".form-control-lg example"
-            value={startDate}
+            value={start_date}
             min={today}
             required
             onChange={(e) => setStartDate(e.target.value)}
@@ -112,7 +113,7 @@ const Reserve = () => {
         </div>
         <div>
           <label htmlFor="date" className="form-label text-white ms-3">
-            Reservation ending date:
+            Ending date:
           </label>
           <input
             id="date"
@@ -120,7 +121,7 @@ const Reserve = () => {
             type="date"
             placeholder="Date"
             aria-label=".form-control-lg example"
-            value={endDate}
+            value={end_date}
             min={today}
             required
             onChange={(e) => setEndDate(e.target.value)}

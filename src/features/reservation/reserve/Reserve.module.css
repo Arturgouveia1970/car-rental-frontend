@@ -56,6 +56,10 @@
   border-radius: 25px;
 }
 
+.backbtn {
+  color: black;
+}
+
 .btn:hover {
   background-color: var(--primary-green) !important;
   border-color: #fff !important;
