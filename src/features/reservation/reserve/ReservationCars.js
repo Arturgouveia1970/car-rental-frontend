@@ -30,7 +30,7 @@ const ReservationCars = ({
   };
 
   if (reserved) {
-    return <Navigate replace to="/reservations" />;
+    return <Navigate replace to="/reservation" />;
   }
 
   return (
