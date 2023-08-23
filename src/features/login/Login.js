@@ -12,21 +12,21 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
-  const [logged_in, setLogged_in] = useState(false);
+  // const [logged_in, setLogged_in] = useState(false);
   const user = useSelector((state) => state.user);
 
   const formSubmit = (e) => {
     e.preventDefault();
     if (password && email) {
       setLoading(true);
-      setLogged_in(true);
+      // setLogged_in(true);
       dispatch(login({
-        email, password, setLoading, setLogged_in,
+        email, password, setLoading,
       }));
     }
   };
 
-  if (logged_in) {
+  if (email) {
     return <Navigate to="/home" />;
   }
 
