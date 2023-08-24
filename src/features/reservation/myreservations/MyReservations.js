@@ -35,6 +35,18 @@ const MyReservations = () => {
       </h2>
     );
   }
+
+  const totalDays = () => {
+  // const date = new Date();
+  // const options = { year: 'numeric', month: 'numeric', day: 'numeric' };
+    const date1 = moment('02-01-2023').format('MM.DD.YYYY');
+    const date2 = moment('02-05-2023').format('MM.DD.YYYY');
+    console.log('date2');
+    const diffInDays = date2.diff(date1, 'days');
+    console.log(diffInDays);
+    return diffInDays;
+  };
+
   return (
     <div className="container-fluid d-flex flex-column align-items-center justify-content-center">
       <h2 className={`${styles.header} m-5`}>My Reservations</h2>
@@ -44,7 +56,6 @@ const MyReservations = () => {
             <img className={styles.img} src={res.car.image} alt="car" />
             <div className="ms-3 mt-1">
               <h3 className={styles.car}>
-                <span>Car model: </span>
                 <span className="fw-bold">{res.car.model}</span>
               </h3>
               <p>
@@ -68,6 +79,13 @@ const MyReservations = () => {
                 <span className="fw-bold">
                   $
                   {res.car.price}
+                </span>
+              </p>
+              <p>
+                <span>Total Price: </span>
+                <span className="fw-bold">
+                  $
+                  {totalDays}
                 </span>
               </p>
             </div>
