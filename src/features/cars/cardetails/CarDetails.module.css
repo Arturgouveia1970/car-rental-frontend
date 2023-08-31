@@ -163,6 +163,7 @@
     object-fit: cover;
     min-width: 300px;
     max-width: 300px;
+    object-fit: cover;
     border-radius: 150px;
   }
 
