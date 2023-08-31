@@ -56,11 +56,7 @@ html {
   }
 }
 
-@media screen and (max-width:390px) {
-  /* body {
-    overflow-x: hidden;
-  } */
-
+@media screen and (max-width: 390px) {
   .links {
     width: 380px;
   }
@@ -71,7 +67,6 @@ html {
     align-items: center;
     flex-direction: column;
     min-height: 400px;
-    /* min-width: 400px; */
     margin-left: 0;
   }
 
