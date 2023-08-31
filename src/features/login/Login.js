@@ -42,18 +42,6 @@ const Login = () => {
           />
           <label htmlFor="floatingUsername">email address</label>
         </div>
-        {/* <div className="form-floating mb-3">
-          <input
-            type="text"
-            className="form-control"
-            id="floatingUsername"
-            placeholder="Password"
-            value={password}
-            required
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <label htmlFor="floatingUsername">Password</label>
-        </div> */}
         {loading ? (
           <button type="button" className="btn btn-primary disabled mb-3">
             <i className="fa-solid fa-spinner fa-spin" />
@@ -64,7 +52,7 @@ const Login = () => {
           </button>
         )}
       </form>
-      <p className={`${styles.errorMsg} fs-5`}>{user.error}</p>
+      {/* <p className={`${styles.errorMsg} fs-5`}>{user.error}</p> */}
       <NavLink className={styles.button} to="/register">
         <span className="btn btn-info mb-0">Sign up</span>
       </NavLink>
