@@ -63,7 +63,7 @@
   }
 }
 
-@media screen and (max-width:390px) {
+@media screen and (max-width: 390px) {
   .mobileMenu {
     box-sizing: border-box;
     width: 100%;
