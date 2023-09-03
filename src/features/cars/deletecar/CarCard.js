@@ -49,7 +49,7 @@ const DeleteCarUi = ({
 DeleteCarUi.propTypes = {
   image: PropTypes.string.isRequired,
   model: PropTypes.string.isRequired,
-  year: PropTypes.string.isRequired,
+  year: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
   cars: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object])).isRequired,
   setCars: PropTypes.func.isRequired,
