@@ -10,7 +10,7 @@ const DeleteCarUi = ({
   const [errorMessage, setErrorMessage] = useState('');
   const removeCar = (id) => {
     axios
-      .delete(`https://dreamcars2.onrender.com/api/v1/cars/${id}`)
+      .delete(`https://dreamcars2.onrender.com/api/v1/car/${id}`)
       .then(() => {
         let filteredCars = [];
         filteredCars = cars.filter((car) => car.id !== id);
@@ -49,7 +49,7 @@ const DeleteCarUi = ({
 DeleteCarUi.propTypes = {
   image: PropTypes.string.isRequired,
   model: PropTypes.string.isRequired,
-  year: PropTypes.string.isRequired,
+  year: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
   cars: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object])).isRequired,
   setCars: PropTypes.func.isRequired,
