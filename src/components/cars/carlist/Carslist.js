@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-// import './Carslist.css';
 import Carousel from 'nuka-carousel/lib/carousel';
 import { useTheme } from '@mui/material/styles';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import useMediaQuery from '@mui/material/useMediaQuery';
-// import Sidebar from '../../common/sidebar/Sidebar';
 import CarCard from './CarCard';
 import './Carousel.css';
 
@@ -41,7 +39,6 @@ const Carlist = () => {
       </div>
     );
   }
-  // const newLocal = <Sidebar />;
 
   return (
     <>
