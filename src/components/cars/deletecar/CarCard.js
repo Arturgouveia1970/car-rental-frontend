@@ -1,6 +1,5 @@
 /* eslint-disable camelcase */
 import React, { useState } from 'react';
-// import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import styles from './DeleteCar.module.css';
