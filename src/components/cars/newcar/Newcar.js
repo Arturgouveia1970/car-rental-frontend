@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 import styles from './newCar.module.css';
-// import Sidebar from '../../common/sidebar/Sidebar';
 
 const Newcar = () => {
   const [model, setModel] = useState('');
