@@ -79,9 +79,9 @@ const Register = () => {
           </button>
         )}
       </form>
-      {/* <p className={`${styles.errorMsg} fs-5`}>
+      <p className={`${styles.errorMsg} fs-5`}>
         {user.error}
-      </p> */}
+      </p>
       <NavLink className={styles.button} to="/login">
         <span className="btn btn-info mb-3">Log in</span>
       </NavLink>

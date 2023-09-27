@@ -140,6 +140,26 @@ const Sidebar = () => {
                 Logout
               </button>
             </li>
+            {/* <li className="w-100 nav-link mb-2 mt-2">
+              <button
+                type="button"
+                className="btn btn-danger d-none d-sm-inline fs-5"
+                onClick={() => logout()}
+              >
+                <i className="fa-solid fa-arrow-right-from-bracket me-2" />
+                Logout
+              </button>
+            </li> */}
+            {/* <li className="nav-item mb-2">
+              <button
+                type="button"
+                className={`${styles.mobileNavLink} nav-link btn btn-danger`}
+                onClick={() => logout()}
+              >
+                <i className="fa-solid fa-arrow-right-from-bracket me-2" />
+                Logout
+              </button>
+            </li> */}
           </ul>
         </div>
       </div>

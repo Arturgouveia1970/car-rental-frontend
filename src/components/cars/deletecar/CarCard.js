@@ -8,13 +8,16 @@ const DeleteCarUi = ({
   id, image, model, year, cars, setCars,
 }) => {
   const [errorMessage, setErrorMessage] = useState('');
+  // const user = useSelector((state) => state.user);
   const removeCar = (id) => {
     axios
-      .delete(`https://dreamcars2.onrender.com/api/v1/cars/${id}`)
-      .then(() => {
+      .delete(`https://dreamcars2.onrender.com/api/v1/car/${id}`)
+      .then((response) => {
         let filteredCars = [];
         filteredCars = cars.filter((car) => car.id !== id);
         setCars(filteredCars);
+        // eslint-disable-next-line
+        console.log(response);
       })
       .catch((error) => {
         setErrorMessage(error.response.data.error);

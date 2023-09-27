@@ -102,30 +102,21 @@
 }
 
 @media screen and (max-width: 890px) {
-  .title {
-    text-align: center;
-    margin-left: 190px;
-    margin-top: 120px;
-  }
-
   .detailContainer {
     flex-direction: column;
-    width: fit-content;
-    margin-left: 420px;
-    margin-right: 50px;
+    margin: auto;
     text-align: center;
   }
 
-  .car {
-    min-width: 90px;
-    max-width: 90px;
-    margin-left: 50px;
-    margin-right: 50px;
-    object-fit: scale-down;
+  .title {
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
   }
 
   .detail {
-    padding: 0px;
+    position: relative;
+    padding: 10px;
   }
 
   .btncontainer {
@@ -137,7 +128,6 @@
 
   .btncontainer button {
     margin: 5px 0;
-    padding: 20px;
   }
 
   .detail h2 {
@@ -159,18 +149,12 @@
   .title {
     text-align: center;
     margin-top: 40px;
-    margin-left: -10px;
+
   }
 
   .car {
-    margin-top: -125px;
+    margin: -25px 0;
     align-items: center;
-  }
-
-  .detail {
-    position: relative;
-    padding: 0px;
-    margin-top: -125px;
   }
 
   .car img {
@@ -180,8 +164,9 @@
     object-fit: cover;
     min-width: 300px;
     max-width: 300px;
-    object-fit: contain;
-    border-radius: 0px;
+
+    object-fit: cover;
+    border-radius: 150px;
   }
 
   .detail {
@@ -202,7 +187,7 @@
   }
 
   .btncontainer button {
-    margin: 5px 0;
-    padding: 5px;
+
+    margin: -10px 0;
   }
 }
