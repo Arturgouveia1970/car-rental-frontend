@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import Reserve from '../features/reservation/reserve/Reserve';
+import Reserve from '../components/reservation/reserve/Reserve';
 import store from '../Redux/configureStore';
 
 describe('Reserve page tests', () => {

@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 import React, { useState } from 'react';
+// import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import styles from './DeleteCar.module.css';
@@ -8,13 +9,16 @@ const DeleteCarUi = ({
   id, image, model, year, cars, setCars,
 }) => {
   const [errorMessage, setErrorMessage] = useState('');
+  // const user = useSelector((state) => state.user);
   const removeCar = (id) => {
     axios
       .delete(`https://dreamcars2.onrender.com/api/v1/car/${id}`)
-      .then(() => {
+      .then((response) => {
         let filteredCars = [];
         filteredCars = cars.filter((car) => car.id !== id);
         setCars(filteredCars);
+        // eslint-disable-next-line
+        console.log(response);
       })
       .catch((error) => {
         setErrorMessage(error.response.data.error);
