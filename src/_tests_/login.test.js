@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import Login from '../features/login/Login';
+import Login from '../components/login/Login';
 import store from '../Redux/configureStore';
 
 describe('Log in tests', () => {

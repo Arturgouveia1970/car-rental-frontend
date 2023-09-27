@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import { useRoutes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import Sidebar from '../features/common/sidebar/Sidebar';
+import Sidebar from '../components/common/sidebar/Sidebar';
 import routes from '../config/Routes';
 import { checkUser } from '../Redux/User/registerSlice';
 

@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import Splash from '../features/splashScreen/Splash';
+import Splash from '../components/splashScreen/Splash';
 import store from '../Redux/configureStore';
 
 describe('Splash screen tests', () => {

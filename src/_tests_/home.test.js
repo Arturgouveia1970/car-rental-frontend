@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import Home from '../features/home/Home';
+import Home from '../components/home/Home';
 import store from '../Redux/configureStore';
 
 describe('Home tests', () => {

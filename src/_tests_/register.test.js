@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import Register from '../features/register/Register';
+import Register from '../components/register/Register';
 import store from '../Redux/configureStore';
 
 describe('Register tests', () => {
