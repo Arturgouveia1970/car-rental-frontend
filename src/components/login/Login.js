@@ -42,19 +42,6 @@ const Login = () => {
           />
           <label htmlFor="floatingUsername">email address</label>
         </div>
-
-        {/* <div className="form-floating mb-3">
-          <input
-            type="text"
-            className="form-control"
-            id="floatingUsername"
-            placeholder="Password"
-            value={password}
-            required
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <label htmlFor="floatingUsername">Password</label>
-        </div> */}
         {loading ? (
           <button type="button" className="btn btn-primary disabled mb-3">
             <i className="fa-solid fa-spinner fa-spin" />
