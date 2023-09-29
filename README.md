@@ -51,11 +51,6 @@ npm start
 
 Visit http://localhost:3000/ in your browser.
 
-## Visit And Open Files
-
-[Visit Repo](https://github.com/Arturgouveia1970/car-rental-frontend.git)
-
-
 ## Author
 
 
