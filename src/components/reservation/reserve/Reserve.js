@@ -1,5 +1,5 @@
 /* eslint-disable camelcase */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
@@ -12,6 +12,8 @@ const Reserve = () => {
   const [start_date, setStartDate] = useState('');
   const [end_date, setEndDate] = useState('');
   const [city, setCity] = useState('');
+  const [price, setPrice] = useState(0);
+  const [total, setTotal] = useState(0);
   const [car, setCar] = useState([]);
   const [loading, setLoading] = useState(false);
   const [reserved, setReserved] = useState(false);
@@ -23,12 +25,38 @@ const Reserve = () => {
   const findCars = (e) => {
     e.preventDefault();
     if (start_date) {
+      setLoading(true);
       axios
         .get('https://dreamcars2.onrender.com/api/v1/cars')
-        .then((response) => setCar(response.data.cars));
-      setLoading(true);
+        .then((response) => {
+          const { cars } = response.data;
+          console.log(cars); // Log the cars array to inspect its structure
+          if (cars.length > 0) {
+            setCar(cars);
+            const totalPrice = cars.reduce((acc, car) => acc + car.price, 0);
+            setPrice(totalPrice);
+            console.log(totalPrice);
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     }
   };
+
+  const totalReservation = (start_date, end_date, price) => {
+    let total = 0;
+    const date1 = new Date(start_date);
+    const date2 = new Date(end_date);
+    const differenceInTime = date2.getTime() - date1.getTime();
+    const differenceInDays = differenceInTime / (24 * 60 * 60 * 1000);
+    total = differenceInDays * price;
+    console.log(price);
+    return total;
+  };
+  useEffect(() => {
+    setTotal(totalReservation(start_date, end_date, price));
+  }, [end_date]);
 
   const reserveCar = (e) => {
     e.preventDefault();
@@ -55,6 +83,7 @@ const Reserve = () => {
         end_date={end_date}
         city={city}
         cars={car}
+        price={price}
         setCars={setCar}
         setLoadingFirst={setLoading}
       />
@@ -126,7 +155,11 @@ const Reserve = () => {
             required
             onChange={(e) => setEndDate(e.target.value)}
           />
+          {/* <label htmlFor="date" className="form-label text-white ms-3">
+            {totalReservation}
+          </label> */}
         </div>
+        <div className={`${styles.total}`}>{total}</div>
         {loading ? (
           <button
             type="submit"
