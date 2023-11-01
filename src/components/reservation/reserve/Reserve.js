@@ -30,7 +30,7 @@ const Reserve = () => {
         .get('https://dreamcars2.onrender.com/api/v1/cars')
         .then((response) => {
           const { cars } = response.data;
-          console.log(cars); // Log the cars array to inspect its structure
+          // console.log(cars); // Log the cars array to inspect its structure
           if (cars.length > 0) {
             setCar(cars);
             // const totalPrice = cars.reduce((acc, car) => acc + car.price, 0);
