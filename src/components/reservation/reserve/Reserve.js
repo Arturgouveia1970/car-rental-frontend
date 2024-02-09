@@ -145,6 +145,7 @@ const Reserve = () => {
         {/* <div className={`${styles.total}`}>{total}</div> */}
         {loading ? (
           <button
+            aria-label="Some label"
             type="submit"
             className={`${styles.btn} btn disabled px-4 ms-4`}
           >
