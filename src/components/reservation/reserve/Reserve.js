@@ -39,6 +39,7 @@ const Reserve = () => {
           }
         })
         .catch((error) => {
+          // eslint-disable-next-line
           console.log(error);
         });
     }
