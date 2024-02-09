@@ -18,7 +18,7 @@ const ReservationCars = ({
     e.preventDefault();
     axios
       .post(
-        `https://dreamcars2.onrender.com/api/v1/reservation/${user.user.id}/${car.id}/${city}/${start_date}/${end_date}`,
+        `https://dreamcars4.onrender.com/api/v1/reservation/${user.user.id}/${car.id}/${city}/${start_date}/${end_date}`,
       )
       .then(() => setReserved(true));
     setLoading(true);

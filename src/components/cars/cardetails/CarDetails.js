@@ -11,7 +11,7 @@ const CarDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`https://dreamcars2.onrender.com/api/v1/car/${id}`)
+      .get(`https://dreamcars4.onrender.com/api/v1/car/${id}`)
       .then((response) => setCar(response.data.car));
     setLoading(false);
   }, [id]);

@@ -15,7 +15,7 @@ const MyReservations = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://dreamcars2.onrender.com/api/v1/reservations/${user.user.id}`)
+      .get(`https://dreamcars4.onrender.com/api/v1/reservations/${user.user.id}`)
       .then((response) => {
         setReservations(response.data.reservations);
         // console.log(response.data.reservations);

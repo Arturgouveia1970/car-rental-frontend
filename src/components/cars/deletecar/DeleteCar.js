@@ -12,7 +12,7 @@ function DeleteCar() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://dreamcars2.onrender.com/api/v1/cars/${user.user.id}`)
+      .get(`https://dreamcars4.onrender.com/api/v1/cars/${user.user.id}`)
       .then((response) => {
         setCars(response.data.cars);
         setLoading(false);

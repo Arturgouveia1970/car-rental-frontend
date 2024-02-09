@@ -27,7 +27,7 @@ const Reserve = () => {
     if (start_date) {
       setLoading(true);
       axios
-        .get('https://dreamcars2.onrender.com/api/v1/cars')
+        .get('https://dreamcars4.onrender.com/api/v1/cars')
         .then((response) => {
           const { cars } = response.data;
           // console.log(cars); // Log the cars array to inspect its structure
@@ -64,7 +64,7 @@ const Reserve = () => {
       setLoading(true);
       axios
         .post(
-          `https://dreamcars2.onrender.com/api/v1/reservation/${user.user.id}/${Number(id)}/${city}/${start_date}/${end_date}`,
+          `https://dreamcars4.onrender.com/api/v1/reservation/${user.user.id}/${Number(id)}/${city}/${start_date}/${end_date}`,
         )
         .then(() => {
           setReserved(true);
