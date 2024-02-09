@@ -59,7 +59,7 @@ const Register = () => {
             <label htmlFor="floatingInput">email address</label>
           </div>
           {loading ? (
-            <button type="button" className="btn btn-primary disabled mb-3">
+            <button aria-label="Some label" type="button" className="btn btn-primary disabled mb-3">
               <i className="fa-solid fa-spinner fa-spin" />
             </button>
           ) : (

@@ -126,6 +126,7 @@ const Newcar = () => {
           </div>
           {loading ? (
             <button
+              aria-label="Some label"
               type="button"
               className={`${styles.btn} btn px-4 ms-4 disabled`}
             >
