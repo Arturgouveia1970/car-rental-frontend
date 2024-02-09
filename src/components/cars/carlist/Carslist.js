@@ -13,7 +13,7 @@ const Carlist = () => {
   useEffect(() => {
     setloading(true);
     axios
-      .get('https://dreamcars2.onrender.com/api/v1/cars')
+      .get('https://dreamcars4.onrender.com/api/v1/cars')
       .then((response) => {
         setCars(response.data.cars);
         // console.log(response.data);
@@ -52,12 +52,12 @@ const Carlist = () => {
       <div>
         <Carousel
           renderCenterLeftControls={({ previousSlide }) => (
-            <button type="button" onClick={previousSlide}>
+            <button aria-label="Some label" type="button" onClick={previousSlide}>
               <i className="fa-solid fa-caret-left" />
             </button>
           )}
           renderCenterRightControls={({ nextSlide }) => (
-            <button type="button" onClick={nextSlide}>
+            <button aria-label="Some label" type="button" onClick={nextSlide}>
               <i className="fa-solid fa-caret-right" />
             </button>
           )}

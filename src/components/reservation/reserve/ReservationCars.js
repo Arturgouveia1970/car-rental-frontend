@@ -18,7 +18,7 @@ const ReservationCars = ({
     e.preventDefault();
     axios
       .post(
-        `https://dreamcars2.onrender.com/api/v1/reservation/${user.user.id}/${car.id}/${city}/${start_date}/${end_date}`,
+        `https://dreamcars4.onrender.com/api/v1/reservation/${user.user.id}/${car.id}/${city}/${start_date}/${end_date}`,
       )
       .then(() => setReserved(true));
     setLoading(true);
@@ -38,6 +38,7 @@ const ReservationCars = ({
       className={`${styles.cnt} container-fluid vh-100 d-flex flex-column align-items-center`}
     >
       <button
+        aria-label="Some label"
         type="button"
         className={`${styles.zindex} ${styles.backBtn} btn text-white fs-1 align-self-start ms-3`}
         onClick={() => backToFirstPage()}
@@ -68,6 +69,7 @@ const ReservationCars = ({
         </select>
         {loading ? (
           <button
+            aria-label="Some label"
             type="submit"
             className={`${styles.btn} disabled btn px-4 ms-4`}
           >

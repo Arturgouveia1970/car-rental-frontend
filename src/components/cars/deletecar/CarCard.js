@@ -11,7 +11,7 @@ const DeleteCarUi = ({
   // const user = useSelector((state) => state.user);
   const removeCar = (id) => {
     axios
-      .delete(`https://dreamcars2.onrender.com/api/v1/car/${id}`)
+      .delete(`https://dreamcars4.onrender.com/api/v1/car/${id}`)
       .then((response) => {
         let filteredCars = [];
         filteredCars = cars.filter((car) => car.id !== id);

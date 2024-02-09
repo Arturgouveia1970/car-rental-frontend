@@ -28,34 +28,36 @@ const Login = () => {
     <div
       className={`${styles.container} container-fluid vw-100 d-flex flex-column align-items-center justify-content-center`}
     >
-      <h2 className={`${styles.header} fs-2 mb-5`}>Log in</h2>
-      <form onSubmit={formSubmit} className={styles.form}>
-        <div className="form-floating mb-3">
-          <input
-            type="text"
-            className="form-control"
-            id="floatingUsername"
-            placeholder="Email"
-            value={email}
-            required
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <label htmlFor="floatingUsername">email address</label>
-        </div>
-        {loading ? (
-          <button type="button" className="btn btn-primary disabled mb-3">
-            <i className="fa-solid fa-spinner fa-spin" />
-          </button>
-        ) : (
-          <button type="submit" className="btn btn-primary mb-3">
-            Log in
-          </button>
-        )}
-      </form>
-      <p className={`${styles.errorMsg} fs-5`}>{user.error}</p>
-      <NavLink className={styles.button} to="/register">
-        <span className="btn btn-info mb-0">Sign up</span>
-      </NavLink>
+      <div className={`${styles.fundo}`}>
+        <form onSubmit={formSubmit} className={styles.form}>
+          <h2 className={`${styles.header} fs-2 mb-5`}>Log in</h2>
+          <div className="form-floating mb-3">
+            <input
+              type="text"
+              className="form-control"
+              id="floatingUsername"
+              placeholder="Email"
+              value={email}
+              required
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <label htmlFor="floatingUsername">email address</label>
+          </div>
+          {loading ? (
+            <button aria-label="Some label" type="button" className="btn btn-primary disabled mb-3">
+              <i className="fa-solid fa-spinner fa-spin" />
+            </button>
+          ) : (
+            <button type="submit" className="btn btn-primary mb-3">
+              Log in
+            </button>
+          )}
+          <NavLink className={styles.button} to="/register">
+            <span className="btn btn-info mb-0">Sign up</span>
+          </NavLink>
+        </form>
+        <p className={`${styles.errorMsg} fs-5`}>{user.error}</p>
+      </div>
     </div>
   );
 };

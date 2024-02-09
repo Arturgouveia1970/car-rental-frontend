@@ -149,7 +149,6 @@
   .title {
     text-align: center;
     margin-top: 40px;
-
   }
 
   .car {
@@ -161,10 +160,8 @@
     justify-content: center;
     min-height: 450px;
     max-height: 451px;
-    object-fit: cover;
     min-width: 300px;
     max-width: 300px;
-
     object-fit: cover;
     border-radius: 150px;
   }
@@ -187,7 +184,6 @@
   }
 
   .btncontainer button {
-
     margin: -10px 0;
   }
 }

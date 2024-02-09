@@ -1,6 +1,6 @@
 # Car Rental Front-End
 
-> Car Rental is a react frontend application for booking cars. This application serves as user interface for the backend and users can add, and delete Cars for rental, as well as make reservations. Users must sign up and sign in to be able to book a car.
+> Car Rental is a react frontend application for booking cars. This application serves as user interface for the backend and users can add, and delete Cars for rental, as well as make reservations. Users must sign up and sign in to be able to book a dream car.
 
 ### Back-End Repository
 

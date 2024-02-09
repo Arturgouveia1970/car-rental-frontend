@@ -98,6 +98,14 @@
   font-size: 16px;
 }
 
+.total {
+  display: flex;
+  width: 60px;
+  color: #fff;
+  padding: 10px;
+  border: 1px solid white;
+}
+
 @media screen and (max-width: 890px) {
   .carCard {
     width: 500px;

@@ -12,6 +12,8 @@ const Reserve = () => {
   const [start_date, setStartDate] = useState('');
   const [end_date, setEndDate] = useState('');
   const [city, setCity] = useState('');
+  // const [price, setPrice] = useState(0);
+  // const [total, setTotal] = useState(0);
   const [car, setCar] = useState([]);
   const [loading, setLoading] = useState(false);
   const [reserved, setReserved] = useState(false);
@@ -23,10 +25,23 @@ const Reserve = () => {
   const findCars = (e) => {
     e.preventDefault();
     if (start_date) {
-      axios
-        .get('https://dreamcars2.onrender.com/api/v1/cars')
-        .then((response) => setCar(response.data.cars));
       setLoading(true);
+      axios
+        .get('https://dreamcars4.onrender.com/api/v1/cars')
+        .then((response) => {
+          const { cars } = response.data;
+          // console.log(cars); // Log the cars array to inspect its structure
+          if (cars.length > 0) {
+            setCar(cars);
+            // const totalPrice = cars.reduce((acc, car) => acc + car.price, 0);
+            // setPrice(totalPrice);
+            // console.log(totalPrice);
+          }
+        })
+        .catch((error) => {
+          // eslint-disable-next-line
+          console.log(error);
+        });
     }
   };
 
@@ -36,7 +51,7 @@ const Reserve = () => {
       setLoading(true);
       axios
         .post(
-          `https://dreamcars2.onrender.com/api/v1/reservation/${user.user.id}/${Number(id)}/${city}/${start_date}/${end_date}`,
+          `https://dreamcars4.onrender.com/api/v1/reservation/${user.user.id}/${Number(id)}/${city}/${start_date}/${end_date}`,
         )
         .then(() => {
           setReserved(true);
@@ -55,6 +70,7 @@ const Reserve = () => {
         end_date={end_date}
         city={city}
         cars={car}
+        // price={price}
         setCars={setCar}
         setLoadingFirst={setLoading}
       />
@@ -127,8 +143,10 @@ const Reserve = () => {
             onChange={(e) => setEndDate(e.target.value)}
           />
         </div>
+        {/* <div className={`${styles.total}`}>{total}</div> */}
         {loading ? (
           <button
+            aria-label="Some label"
             type="submit"
             className={`${styles.btn} btn disabled px-4 ms-4`}
           >
