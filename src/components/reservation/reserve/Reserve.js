@@ -44,20 +44,6 @@ const Reserve = () => {
     }
   };
 
-  // const totalReservation = (start_date, end_date, price) => {
-  //   let total = 0;
-  //   const date1 = new Date(start_date);
-  //   const date2 = new Date(end_date);
-  //   const differenceInTime = date2.getTime() - date1.getTime();
-  //   const differenceInDays = differenceInTime / (24 * 60 * 60 * 1000);
-  //   total = differenceInDays * price;
-  //   console.log(price);
-  //   return total;
-  // };
-  // useEffect(() => {
-  //   setTotal(totalReservation(start_date, end_date, price));
-  // }, [end_date]);
-
   const reserveCar = (e) => {
     e.preventDefault();
     if (start_date && city) {
